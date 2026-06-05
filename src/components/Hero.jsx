@@ -107,7 +107,7 @@ export default function Hero() {
             {/* Inner Portrait Card */}
             <div className="h-[340px] md:h-[390px] rounded-2xl overflow-hidden relative group">
               <img 
-                src="/image/farkhan.png" 
+                src="/image/farkhandwi.png" 
                 alt="A. Farkhan Dwi Kusuma" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -127,7 +127,7 @@ export default function Hero() {
             <div className="flex justify-between items-center px-1 pt-4 pb-1 border-t border-zinc-900 mt-4">
               <div className="flex items-center gap-3">
                 <img 
-                  src="/image/farkhan.png" 
+                  src="/image/farkhandwi.png" 
                   alt="Avatar" 
                   className="w-9 h-9 rounded-full border border-zinc-900 object-cover shrink-0" 
                 />
