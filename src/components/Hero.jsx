@@ -91,9 +91,8 @@ export default function Hero() {
               {h.viewProjects} <span className="inline-block transform scale-110">↗</span>
             </a>
             <a
-              href="https://drive.google.com/file/d/1Vy1b1FgAihLdkTWqzTithh_b--mh4Ycz/view"
-              target="_blank"
-              rel="noreferrer"
+              href="/assets/cv/CV A. FARKHAN DWI KUSUMA.pdf"
+              download="CV A. FARKHAN DWI KUSUMA.pdf"
               className="px-6 md:px-8 py-3.5 rounded-full border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-900/40 text-white font-body text-xs md:text-sm font-medium tracking-wider text-center transition-all duration-300"
             >
               {h.downloadCv}
