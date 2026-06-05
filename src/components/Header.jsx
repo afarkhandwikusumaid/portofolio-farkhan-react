@@ -174,7 +174,7 @@ export default function Header() {
 
         {/* ── Mobile nav drawer (slide down) ─────────────────────────────── */}
         <nav
-          className={`fixed top-0 left-0 w-full bg-[#0c0c14]/98 z-[100] flex flex-col pt-24 pb-10 px-8 border-b border-zinc-800/80 shadow-2xl transition-transform duration-300 md:hidden ${navOpen ? 'translate-y-0' : '-translate-y-full'}`}
+          className={`fixed top-0 left-0 w-full bg-[#0c0c14]/98 z-[100] flex flex-col pt-24 pb-10 px-8 border-b border-zinc-800/80 shadow-2xl transition-all duration-300 md:hidden ${navOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}
           aria-label="Mobile"
         >
           <span className="font-heading text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-6 text-center block">MENU</span>
