@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 800;
   color: #ffffff;
+  transform: scale(0.95, 1.15);
 }
 
 /* ==========================================================================
@@ -129,4 +130,13 @@ h1, h2, h3, h4, h5, h6 {
   filter: blur(60px);
   pointer-events: none;
   z-index: 0;
+}
+
+/* Hide scrollbar for slider */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

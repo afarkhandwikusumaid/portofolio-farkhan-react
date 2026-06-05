@@ -44,7 +44,7 @@ export default function Contact() {
         <div className="flex flex-col items-start text-left mb-16">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-8 h-[1px] bg-blue-500" />
-            <span className="font-body text-xs font-bold tracking-widest text-blue-500 uppercase">{c.label}</span>
+            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">{c.label}</span>
           </div>
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
             {c.heading}
@@ -64,7 +64,7 @@ export default function Contact() {
                 </div>
                 <div className="flex flex-col min-w-0">
                   <span className="font-heading text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">{info.titleKey}</span>
-                  <span className="font-body text-sm text-white break-all">{info.value}</span>
+                  <span className="font-body text-xs md:text-sm text-white break-all">{info.value}</span>
                 </div>
               </div>
             ))}

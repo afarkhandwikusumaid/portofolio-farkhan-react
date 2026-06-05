@@ -49,7 +49,7 @@ export default function About() {
         <div className="lg:col-span-7 flex flex-col items-start text-left">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-8 h-[1px] bg-blue-500" />
-            <span className="font-body text-xs font-bold tracking-widest text-blue-500 uppercase">{a.label}</span>
+            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">{a.label}</span>
           </div>
 
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">

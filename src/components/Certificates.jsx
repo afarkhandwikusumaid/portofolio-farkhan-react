@@ -22,7 +22,7 @@ export default function Certificates() {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-8 h-[1px] bg-accent-green" />
-            <span className="font-body text-xs font-bold tracking-widest text-accent-green uppercase">{c.label}</span>
+            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-accent-green uppercase">{c.label}</span>
             <span className="w-8 h-[1px] bg-accent-green" />
           </div>
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
@@ -31,9 +31,9 @@ export default function Certificates() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 -mx-6 px-6 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:snap-none md:pb-0 md:px-0 md:-mx-0 hide-scrollbar">
           {c.items.map((cert, idx) => (
-            <div key={idx} className="service-card p-6 rounded-2xl flex flex-col text-left group h-full">
+            <div key={idx} className="service-card p-6 rounded-2xl flex flex-col text-left group h-auto min-w-[85vw] snap-center sm:min-w-[300px] md:min-w-0 md:h-full">
 
               {/* Certificate image (clickable) */}
               <div

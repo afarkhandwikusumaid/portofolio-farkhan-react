@@ -27,7 +27,7 @@ export default function Projects() {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-8 h-[1px] bg-accent-purple" />
-            <span className="font-body text-xs font-bold tracking-widest text-accent-purple uppercase">{p.label}</span>
+            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-accent-purple uppercase">{p.label}</span>
             <span className="w-8 h-[1px] bg-accent-purple" />
           </div>
           <h2 className="font-heading text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
