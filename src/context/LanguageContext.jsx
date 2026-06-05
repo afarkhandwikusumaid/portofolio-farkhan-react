@@ -1,8 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
 
-// ── Translation strings ────────────────────────────────────────────────────
-// To add a new language: copy the `en` block, translate all values, and add
-// it here with its ISO language code as the key (e.g. `ja`, `fr`).
 export const translations = {
   en: {
     nav: {
