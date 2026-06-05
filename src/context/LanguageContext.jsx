@@ -56,7 +56,7 @@ export const translations = {
 
     certificates: {
       label:   'Showcase',
-      heading: 'Certificate',
+      heading: 'Certifications',
       items: [
         { title: 'Web Programming Basics',    provider: 'Dicoding',   year: '2026', desc: 'Learned fundamental web technologies including HTML structure, styling with CSS, and responsive layouts.' },
         { title: 'Front-End Web Development', provider: 'BTNG DNCC',  year: '2025', desc: 'Acquired hands-on experience building interactive and responsive web applications with JavaScript DOM manipulation.' },
