@@ -11,7 +11,7 @@ export const translations = {
       services:     'Services',
       projects:     'Projects',
       certificates: 'Certificates',
-      skills:       'Skills & Ed',
+      skills:       'Skills',
       contact:      'Contact',
     },
 
@@ -48,7 +48,7 @@ export const translations = {
       heading:   'Featured Projects',
       visitSite: 'VISIT SITE',
       items: [
-        { title: 'Puri elena',          desc: 'An elegant digital presence developed for Purielena. Incorporating lightweight interfaces and customized client workflow layouts.',                           tags: ['React', 'Tailwind'] },
+        { title: 'Purielena',          desc: 'An elegant digital presence developed for Purielena. Incorporating lightweight interfaces and customized client workflow layouts.',                           tags: ['React', 'Tailwind'] },
         { title: 'Peradi Kharisma',    desc: 'Official platform for Peradi Kharisma. Built with a robust layout system to provide clear informational portals and accessibility.',                     tags: ['HTML', 'CSS', 'JS'] },
         { title: 'Pointcut Hair Studio', desc: 'Interactive booking and styling catalogue website for Pointcut Hair Studio. Designed with smooth micro-interactions.',                                  tags: ['React', 'Tailwind'] },
       ],
@@ -90,7 +90,7 @@ export const translations = {
 
     contact: {
       label:              'Get In Touch',
-      heading:            'Contact Us',
+      heading:            'Contact Me',
       location:           'Semarang, Jawa Tengah, ID',
       nameLabel:          'Name',
       emailLabel:         'Email',
@@ -114,7 +114,7 @@ export const translations = {
       services:     'Layanan',
       projects:     'Proyek',
       certificates: 'Sertifikat',
-      skills:       'Keahlian & Ed',
+      skills:       'Keahlian',
       contact:      'Kontak',
     },
 
@@ -151,7 +151,7 @@ export const translations = {
       heading:   'Proyek Unggulan',
       visitSite: 'KUNJUNGI SITUS',
       items: [
-        { title: 'Puri elena',            desc: 'Kehadiran digital elegan yang dikembangkan untuk Purielena. Menggabungkan antarmuka ringan dan tata letak alur kerja klien yang disesuaikan.',                     tags: ['React', 'Tailwind'] },
+        { title: 'Purielena',            desc: 'Kehadiran digital elegan yang dikembangkan untuk Purielena. Menggabungkan antarmuka ringan dan tata letak alur kerja klien yang disesuaikan.',                     tags: ['React', 'Tailwind'] },
         { title: 'Peradi Kharisma',      desc: 'Platform resmi untuk Peradi Kharisma. Dibangun dengan sistem tata letak yang kokoh untuk menyajikan portal informasi yang jelas dan aksesibel.',                 tags: ['HTML', 'CSS', 'JS'] },
         { title: 'Pointcut Hair Studio', desc: 'Website booking interaktif dan katalog gaya untuk Pointcut Hair Studio. Dibangun dengan micro-interaction yang halus.',                                           tags: ['React', 'Tailwind'] },
       ],
@@ -192,7 +192,7 @@ export const translations = {
     },
 
     contact: {
-      label:              'Hubungi Kami',
+      label:              'Hubungi Saya',
       heading:            'Kontak',
       location:           'Semarang, Jawa Tengah, ID',
       nameLabel:          'Nama',

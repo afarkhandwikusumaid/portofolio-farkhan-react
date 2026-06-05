@@ -2,7 +2,7 @@ import React from 'react'
 import { useLang } from '../context/LanguageContext'
 
 const projectImages = ['/image/purielena.jpg', '/image/peradikharisma.png', '/image/pointcut.jpg']
-const projectLinks  = ['https://purielena.com', 'https://peradikharisma.org', 'https://pointcut-hairtsudio.com']
+const projectLinks  = ['https://purielena.com', 'https://peradikharisma.org', 'https://pointcut-hairstudio.com']
 
 const ArrowIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
