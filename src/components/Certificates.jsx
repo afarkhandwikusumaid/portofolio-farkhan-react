@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useLang } from '../context/LanguageContext'
 
 const certImages = [
@@ -11,6 +11,17 @@ export default function Certificates() {
   const { t } = useLang()
   const c = t.certificates
   const [selectedImage, setSelectedImage] = useState(null)
+
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [selectedImage])
 
   return (
     <section id="certificates" className="py-24 bg-[#0a0a0f] relative overflow-hidden space-grid">
