@@ -29,7 +29,7 @@ export const translations = {
       label:   'About Me',
       heading: 'FULL-STACK DEVELOPER & B2B MARKETING',
       bio1:    'I am an Informatics Engineering student at Dian Nuswantoro University (UDINUS) focusing on Full-Stack Web Development (React.js). Outside of coding, I have a track record in B2B Marketing, specifically in building engagement and digital marketing strategies for creative production vendors.',
-      bio2:    'I currently work in B2B Marketing for yearbook vendors at lentera.cinema. This combination of programming skills and market awareness enables me to approach software development from both angles: clean code architecture and real business/user needs.',
+      bio2:    'I currently work as a freelance marketing specialist for yearbook vendor companies. This combination of programming skills and market awareness enables me to approach software development from both angles: clean code architecture and real business/user needs.',
       stats:   ['1 YEAR EXPERIENCE', '5+ PROJECTS', '5 CLIENTS SERVED'],
     },
 
@@ -38,7 +38,7 @@ export const translations = {
       heading: 'Specialized In',
       items: [
         { title: 'Full-Stack Development', desc: 'Building responsive web applications specializing in React.js and robust database integrations.' },
-        { title: 'B2B Marketing',          desc: 'Developing digital marketing strategies and building engagement for yearbook creative production at lentera.cinema.' },
+        { title: 'B2B Marketing',          desc: 'Developing digital marketing strategies and building engagement for yearbook creative production companies.' },
         { title: 'UI/UX Design',           desc: 'Designing intuitive user journeys, clean interfaces, and custom design systems for modern platforms.' },
       ],
     },
@@ -132,7 +132,7 @@ export const translations = {
       label:   'Tentang Saya',
       heading: 'FULL-STACK DEVELOPER & B2B MARKETING',
       bio1:    'Saya adalah mahasiswa Teknik Informatika UDINUS yang berfokus pada pengembangan Full-Stack Web Development (React.js). Di luar coding, saya memiliki rekam jejak di bidang B2B Marketing, khususnya dalam membangun engagement dan strategi pemasaran digital untuk vendor creative production.',
-      bio2:    'Saat ini saya bekerja di bidang B2B Marketing untuk vendor yearbook di lentera.cinema. Kombinasi antara pemrograman dan market awareness membuat saya mampu melihat pengembangan perangkat lunak dari dua sisi: arsitektur kode yang bersih dan kebutuhan riil bisnis/pengguna.',
+      bio2:    'Saat ini saya bekerja sebagai freelance marketing untuk perusahaan vendor yearbook. Kombinasi antara pemrograman dan market awareness membuat saya mampu melihat pengembangan perangkat lunak dari dua sisi: arsitektur kode yang bersih dan kebutuhan riil bisnis/pengguna.',
       stats:   ['1 TAHUN PENGALAMAN', '5+ PROYEK', '5 KLIEN DILAYANI'],
     },
 
@@ -141,7 +141,7 @@ export const translations = {
       heading: 'Keahlian Khusus',
       items: [
         { title: 'Full-Stack Development', desc: 'Membangun aplikasi web responsif dengan spesialisasi pada React.js dan integrasi database yang kokoh.' },
-        { title: 'B2B Marketing',          desc: 'Mengembangkan strategi pemasaran digital dan membangun engagement untuk produksi kreatif buku tahunan di lentera.cinema.' },
+        { title: 'B2B Marketing',          desc: 'Mengembangkan strategi pemasaran digital dan membangun engagement untuk perusahaan vendor buku tahunan.' },
         { title: 'Desain UI/UX',           desc: 'Merancang perjalanan pengguna yang intuitif, antarmuka yang bersih, dan sistem desain kustom untuk platform modern.' },
       ],
     },
