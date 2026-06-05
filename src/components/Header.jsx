@@ -140,7 +140,7 @@ export default function Header() {
                     onClick={() => { setLang(code); setLangOpen(false) }}
                     className={`w-full flex items-center gap-3 px-4 py-3 text-xs font-body font-bold uppercase tracking-widest transition-colors duration-150 text-left
                       ${lang === code
-                        ? 'text-accent-green bg-accent-green/5'
+                        ? 'text-blue-500 bg-blue-500/5'
                         : 'text-zinc-400 hover:text-white hover:bg-zinc-800/60'
                       }`}
                   >
@@ -149,7 +149,7 @@ export default function Header() {
                     {lang === code && (
                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-                        className="ml-auto text-accent-green">
+                        className="ml-auto text-blue-500">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                     )}

@@ -26,9 +26,9 @@ export default function Projects() {
         {/* Section title */}
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-[1px] bg-accent-purple" />
-            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-accent-purple uppercase">{p.label}</span>
-            <span className="w-8 h-[1px] bg-accent-purple" />
+            <span className="w-8 h-[1px] bg-blue-500" />
+            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">{p.label}</span>
+            <span className="w-8 h-[1px] bg-blue-500" />
           </div>
           <h2 className="font-heading text-2xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
             {p.heading}
@@ -74,7 +74,7 @@ export default function Projects() {
                 href={projectLinks[idx]}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full py-3 rounded-lg border border-zinc-800 bg-zinc-900/40 hover:bg-accent-purple/10 hover:border-accent-purple text-center text-white font-body text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+                className="w-full py-3 rounded-lg border border-zinc-800 bg-zinc-900/40 hover:bg-blue-500/10 hover:border-blue-500 text-center text-white font-body text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 group/btn"
               >
                 <span>{p.visitSite}</span>
                 <span className="transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-200">

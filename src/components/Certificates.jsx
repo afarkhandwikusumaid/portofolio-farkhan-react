@@ -32,9 +32,9 @@ export default function Certificates() {
         {/* Section title */}
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-[1px] bg-accent-green" />
-            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-accent-green uppercase">{c.label}</span>
-            <span className="w-8 h-[1px] bg-accent-green" />
+            <span className="w-8 h-[1px] bg-blue-500" />
+            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">{c.label}</span>
+            <span className="w-8 h-[1px] bg-blue-500" />
           </div>
           <h2 className="font-heading text-2xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
             {c.heading}
@@ -83,7 +83,7 @@ export default function Certificates() {
               </div>
 
               <h3 className="font-heading text-base md:text-lg font-bold uppercase tracking-tight text-white mb-1">{cert.title}</h3>
-              <span className="font-body text-[10px] font-bold text-accent-green mb-3 block uppercase tracking-wider">{cert.provider}</span>
+              <span className="font-body text-[10px] font-bold text-blue-500 mb-3 block uppercase tracking-wider">{cert.provider}</span>
               <p className="text-zinc-400 font-body text-xs leading-relaxed flex-grow">{cert.desc}</p>
             </div>
           ))}
