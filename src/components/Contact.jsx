@@ -46,7 +46,7 @@ export default function Contact() {
             <span className="w-8 h-[1px] bg-blue-500" />
             <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">{c.label}</span>
           </div>
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
+          <h2 className="font-heading text-2xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
             {c.heading}
           </h2>
         </div>

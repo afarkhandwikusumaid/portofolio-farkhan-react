@@ -52,7 +52,7 @@ export default function About() {
             <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">{a.label}</span>
           </div>
 
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">
+          <h2 className="font-heading text-2xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">
             {a.heading}
           </h2>
 

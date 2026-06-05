@@ -30,7 +30,7 @@ export default function Projects() {
             <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-accent-purple uppercase">{p.label}</span>
             <span className="w-8 h-[1px] bg-accent-purple" />
           </div>
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
+          <h2 className="font-heading text-2xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
             {p.heading}
           </h2>
         </div>

@@ -30,7 +30,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 800;
   color: #ffffff;
-  transform: scale(0.95, 1.15);
 }
 
 /* ==========================================================================
