@@ -1,26 +1,25 @@
 import React, { useState, useEffect } from 'react'
 import { useLang } from '../context/LanguageContext'
 
-const certImages = [
+// ── Static data ──────────────────────────────────────────────────────────────
+
+const CERT_IMAGES = [
   '/image/sertifikat/sertifwebistedicoding.jpg',
   '/image/sertifikat/sertifbtngweb.jpeg',
-  '/image/sertifikat/sertifaidicoding.jpg'
+  '/image/sertifikat/sertifaidicoding.jpg',
 ]
+
+// ── Component ────────────────────────────────────────────────────────────────
 
 export default function Certificates() {
   const { t } = useLang()
   const c = t.certificates
+
   const [selectedImage, setSelectedImage] = useState(null)
 
   useEffect(() => {
-    if (selectedImage) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
-    return () => {
-      document.body.style.overflow = ''
-    }
+    document.body.style.overflow = selectedImage ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
   }, [selectedImage])
 
   return (
@@ -41,41 +40,40 @@ export default function Certificates() {
           </h2>
         </div>
 
-        {/* Cards */}
+        {/* Certificate cards */}
         <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 -mx-6 px-6 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:snap-none md:pb-0 md:px-0 md:-mx-0 hide-scrollbar">
           {c.items.map((cert, idx) => (
             <div key={idx} className="service-card p-6 rounded-2xl flex flex-col text-left group h-auto min-w-[85vw] snap-center sm:min-w-[300px] md:min-w-0 md:h-full">
 
-              {/* Certificate image (clickable) */}
+              {/* Certificate image (clickable to zoom) */}
               <div
                 className="w-full aspect-[4/3] rounded-xl overflow-hidden mb-6 border border-zinc-800/80 bg-zinc-950 relative cursor-pointer"
-                onClick={() => setSelectedImage(certImages[idx])}
+                onClick={() => setSelectedImage(CERT_IMAGES[idx])}
                 role="button"
                 tabIndex={0}
                 aria-label={`View certificate: ${cert.title}`}
-                onKeyDown={(e) => e.key === 'Enter' && setSelectedImage(certImages[idx])}
+                onKeyDown={(e) => e.key === 'Enter' && setSelectedImage(CERT_IMAGES[idx])}
               >
                 <img
-                  src={certImages[idx]}
+                  src={CERT_IMAGES[idx]}
                   alt={cert.title}
                   className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
                   loading="lazy"
                   decoding="async"
                 />
-                {/* Zoom hint */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 pointer-events-none">
                   <span className="font-body text-[10px] text-white bg-zinc-900/90 px-3.5 py-1.5 rounded-full border border-zinc-800 flex items-center gap-1.5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                      <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                      <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+                      <line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" />
                     </svg>
                     ZOOM
                   </span>
                 </div>
               </div>
 
-              {/* Year badge (no icon) */}
+              {/* Year badge */}
               <div className="flex justify-end w-full mb-4">
                 <span className="font-body text-[10px] font-bold bg-zinc-900/60 border border-zinc-800 px-3 py-1 rounded-full text-zinc-400">
                   {cert.year}
@@ -85,13 +83,14 @@ export default function Certificates() {
               <h3 className="font-heading text-base md:text-lg font-bold uppercase tracking-tight text-white mb-1">{cert.title}</h3>
               <span className="font-body text-[10px] font-bold text-blue-500 mb-3 block uppercase tracking-wider">{cert.provider}</span>
               <p className="text-zinc-400 font-body text-xs leading-relaxed flex-grow">{cert.desc}</p>
+
             </div>
           ))}
         </div>
 
       </div>
 
-      {/* Lightbox modal */}
+      {/* Lightbox */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black/90 backdrop-blur-md z-[2000] flex items-center justify-center p-4 cursor-zoom-out"

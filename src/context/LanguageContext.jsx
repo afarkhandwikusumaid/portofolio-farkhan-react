@@ -18,14 +18,14 @@ export const translations = {
       shortDesc:    'I help businesses and individuals turn ideas into beautiful and functional digital solutions.',
       viewProjects: 'View Projects',
       downloadCv:   'DOWNLOAD CV',
-      cardRole:     'Web Developer',
+      cardRole:     'Front-End Web Developer',
       contactMe:    'Contact Me',
     },
 
     about: {
       label:   'About Me',
-      heading: 'FULL-STACK DEVELOPER & B2B MARKETING',
-      bio1:    'I am an Informatics Engineering student at Dian Nuswantoro University (UDINUS) focusing on Full-Stack Web Development (React.js). Outside of coding, I have a track record in B2B Marketing, specifically in building engagement and digital marketing strategies for creative production vendors.',
+      heading: 'FRONT-END WEB DEVELOPER & B2B MARKETING',
+      bio1:    'I am an Informatics Engineering student at Dian Nuswantoro University (UDINUS) focusing on Front-End Web Development (React.js). Outside of coding, I have a track record in B2B Marketing, specifically in building engagement and digital marketing strategies for creative production vendors.',
       bio2:    'I currently work as a freelance marketing specialist for yearbook vendor companies. This combination of programming skills and market awareness enables me to approach software development from both angles: clean code architecture and real business/user needs.',
       stats:   ['1 YEAR EXPERIENCE', '5+ PROJECTS', '5 CLIENTS SERVED'],
     },
@@ -34,7 +34,7 @@ export const translations = {
       label:   'Services',
       heading: 'Specialized In',
       items: [
-        { title: 'Full-Stack Development', desc: 'Building responsive web applications specializing in React.js and robust database integrations.' },
+        { title: 'Front-End Web Development', desc: 'Building responsive web applications specializing in React.js and seamless API integrations.' },
         { title: 'B2B Marketing',          desc: 'Developing digital marketing strategies and building engagement for yearbook creative production companies.' },
         { title: 'UI/UX Design',           desc: 'Designing intuitive user journeys, clean interfaces, and custom design systems for modern platforms.' },
       ],
@@ -45,7 +45,7 @@ export const translations = {
       heading:   'Featured Projects',
       visitSite: 'VISIT SITE',
       items: [
-        { title: 'Purielena',          desc: 'An elegant digital presence developed for Purielena. Incorporating lightweight interfaces and customized client workflow layouts.',                           tags: ['React', 'Tailwind'] },
+        { title: 'Puri Elena',          desc: 'An elegant digital presence developed for Puri Elena. Incorporating lightweight interfaces and customized client workflow layouts.',                           tags: ['React', 'Tailwind'] },
         { title: 'Peradi Kharisma',    desc: 'Official platform for Peradi Kharisma. Built with a robust layout system to provide clear informational portals and accessibility.',                     tags: ['HTML', 'CSS', 'JS'] },
         { title: 'Pointcut Hair Studio', desc: 'Interactive booking and styling catalogue website for Pointcut Hair Studio. Designed with smooth micro-interactions.',                                  tags: ['React', 'Tailwind'] },
       ],
@@ -127,8 +127,8 @@ export const translations = {
 
     about: {
       label:   'Tentang Saya',
-      heading: 'FULL-STACK DEVELOPER & B2B MARKETING',
-      bio1:    'Saya adalah mahasiswa Teknik Informatika UDINUS yang berfokus pada pengembangan Full-Stack Web Development (React.js). Di luar coding, saya memiliki rekam jejak di bidang B2B Marketing, khususnya dalam membangun engagement dan strategi pemasaran digital untuk vendor creative production.',
+      heading: 'FRONT-END WEB DEVELOPER & B2B MARKETING',
+      bio1:    'Saya adalah mahasiswa Teknik Informatika UDINUS yang berfokus pada pengembangan Front-End Web Development (React.js). Di luar coding, saya memiliki rekam jejak di bidang B2B Marketing, khususnya dalam membangun engagement dan strategi pemasaran digital untuk vendor creative production.',
       bio2:    'Saat ini saya bekerja sebagai freelance marketing untuk perusahaan vendor yearbook. Kombinasi antara pemrograman dan market awareness membuat saya mampu melihat pengembangan perangkat lunak dari dua sisi: arsitektur kode yang bersih dan kebutuhan riil bisnis/pengguna.',
       stats:   ['1 TAHUN PENGALAMAN', '5+ PROYEK', '5 KLIEN DILAYANI'],
     },
@@ -137,7 +137,7 @@ export const translations = {
       label:   'Layanan',
       heading: 'Keahlian Khusus',
       items: [
-        { title: 'Full-Stack Development', desc: 'Membangun aplikasi web responsif dengan spesialisasi pada React.js dan integrasi database yang kokoh.' },
+        { title: 'Front-End Web Development', desc: 'Membangun aplikasi web responsif dengan spesialisasi pada React.js dan integrasi API yang mulus.' },
         { title: 'B2B Marketing',          desc: 'Mengembangkan strategi pemasaran digital dan membangun engagement untuk perusahaan vendor buku tahunan.' },
         { title: 'Desain UI/UX',           desc: 'Merancang perjalanan pengguna yang intuitif, antarmuka yang bersih, dan sistem desain kustom untuk platform modern.' },
       ],
@@ -148,7 +148,7 @@ export const translations = {
       heading:   'Proyek Unggulan',
       visitSite: 'KUNJUNGI SITUS',
       items: [
-        { title: 'Purielena',            desc: 'Kehadiran digital elegan yang dikembangkan untuk Purielena. Menggabungkan antarmuka ringan dan tata letak alur kerja klien yang disesuaikan.',                     tags: ['React', 'Tailwind'] },
+        { title: 'Puri Elena',            desc: 'Kehadiran digital elegan yang dikembangkan untuk Puri Elena. Menggabungkan antarmuka ringan dan tata letak alur kerja klien yang disesuaikan.',                     tags: ['React', 'Tailwind'] },
         { title: 'Peradi Kharisma',      desc: 'Platform resmi untuk Peradi Kharisma. Dibangun dengan sistem tata letak yang kokoh untuk menyajikan portal informasi yang jelas dan aksesibel.',                 tags: ['HTML', 'CSS', 'JS'] },
         { title: 'Pointcut Hair Studio', desc: 'Website booking interaktif dan katalog gaya untuk Pointcut Hair Studio. Dibangun dengan micro-interaction yang halus.',                                           tags: ['React', 'Tailwind'] },
       ],

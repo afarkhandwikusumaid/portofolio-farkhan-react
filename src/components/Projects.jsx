@@ -1,16 +1,37 @@
 import React from 'react'
 import { useLang } from '../context/LanguageContext'
 
-const projectImages = ['/image/purielena.jpg', '/image/peradikharisma.png', '/image/pointcut.jpg']
-const projectLinks  = ['https://purielena.com', 'https://peradikharisma.org', 'https://pointcut-hairstudio.com']
+// ── Static data ──────────────────────────────────────────────────────────────
 
 const ArrowIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-    fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="14" height="14"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <line x1="7" y1="17" x2="17" y2="7" />
     <polyline points="7 7 17 7 17 17" />
   </svg>
 )
+
+const PROJECT_IMAGES = [
+  '/image/purielena.jpg',
+  '/image/peradikharisma.png',
+  '/image/pointcut.jpg',
+]
+
+const PROJECT_LINKS = [
+  'https://purielena.com',
+  'https://peradikharisma.org',
+  'https://pointcut-hairstudio.com',
+]
+
+// ── Component ────────────────────────────────────────────────────────────────
 
 export default function Projects() {
   const { t } = useLang()
@@ -35,15 +56,15 @@ export default function Projects() {
           </h2>
         </div>
 
-        {/* Cards */}
+        {/* Project cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {p.items.map((project, idx) => (
             <div key={idx} className="service-card p-6 rounded-2xl flex flex-col h-full group">
 
-              {/* Project image */}
+              {/* Thumbnail */}
               <div className="w-full aspect-[16/10] rounded-xl overflow-hidden mb-6 border border-zinc-800/80 bg-zinc-950 relative">
                 <img
-                  src={projectImages[idx]}
+                  src={PROJECT_IMAGES[idx]}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   loading="lazy"
@@ -69,9 +90,9 @@ export default function Projects() {
                 {project.desc}
               </p>
 
-              {/* Visit link */}
+              {/* CTA */}
               <a
-                href={projectLinks[idx]}
+                href={PROJECT_LINKS[idx]}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full py-3 rounded-lg border border-zinc-800 bg-zinc-900/40 hover:bg-blue-500/10 hover:border-blue-500 text-center text-white font-body text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 group/btn"

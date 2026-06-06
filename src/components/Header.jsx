@@ -1,41 +1,101 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useLang } from '../context/LanguageContext'
 
-// Globe icon for language switcher
+// ── Icons ────────────────────────────────────────────────────────────────────
+
 const GlobeIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-    fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16" height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <circle cx="12" cy="12" r="10" />
     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
     <path d="M2 12h20" />
   </svg>
 )
 
+const ChevronIcon = ({ open }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="12" height="12"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+  >
+    <polyline points="6 9 12 15 18 9" />
+  </svg>
+)
+
+const CheckIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="12" height="12"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="ml-auto text-blue-500"
+  >
+    <polyline points="20 6 9 17 4 12" />
+  </svg>
+)
+
+// ── Constants ────────────────────────────────────────────────────────────────
+
+const NAV_LINKS = [
+  { key: 'home',         href: '#home' },
+  { key: 'about',        href: '#about' },
+  { key: 'services',     href: '#services' },
+  { key: 'projects',     href: '#projects' },
+  { key: 'certificates', href: '#certificates' },
+  { key: 'skills',       href: '#skills' },
+  { key: 'contact',      href: '#contact' },
+]
+
+const LANGUAGES = [
+  { code: 'en', label: 'English',   flag: '🇬🇧' },
+  { code: 'id', label: 'Indonesia', flag: '🇮🇩' },
+]
+
+// ── Component ────────────────────────────────────────────────────────────────
+
 export default function Header() {
   const { lang, setLang, t } = useLang()
 
-  const [navOpen, setNavOpen]       = useState(false)
-  const [scrolled, setScrolled]     = useState(false)
-  const [langOpen, setLangOpen]     = useState(false)
-  const langRef                     = useRef(null)
+  const [navOpen,  setNavOpen]  = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [langOpen, setLangOpen] = useState(false)
+  const langRef = useRef(null)
 
-  // ── Scroll & resize listeners ────────────────────────────────────────────
+  // Global event listeners
   useEffect(() => {
     const onKey    = (e) => { if (e.key === 'Escape') { setNavOpen(false); setLangOpen(false) } }
-    const onResize = () => { if (window.innerWidth > 768) setNavOpen(false) }
-    const onScroll = () => setScrolled(window.scrollY > 20)
+    const onResize = ()  => { if (window.innerWidth > 768) setNavOpen(false) }
+    const onScroll = ()  => setScrolled(window.scrollY > 20)
 
     window.addEventListener('keydown', onKey)
-    window.addEventListener('resize', onResize)
-    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize',  onResize)
+    window.addEventListener('scroll',  onScroll, { passive: true })
     return () => {
       window.removeEventListener('keydown', onKey)
-      window.removeEventListener('resize', onResize)
-      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize',  onResize)
+      window.removeEventListener('scroll',  onScroll)
     }
   }, [])
 
-  // Close language dropdown when clicking outside
+  // Close language dropdown on outside click
   useEffect(() => {
     const onClickOutside = (e) => {
       if (langRef.current && !langRef.current.contains(e.target)) setLangOpen(false)
@@ -44,7 +104,6 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', onClickOutside)
   }, [])
 
-  // ── Derived values ───────────────────────────────────────────────────────
   const navClass = [
     'fixed left-0 right-0 mx-auto',
     'w-[92%] max-w-5xl rounded-full border',
@@ -56,19 +115,9 @@ export default function Header() {
       : 'bg-[#0a0a0f]/40 border-zinc-900/50',
   ].join(' ')
 
-  const navLinks = [
-    { key: 'home',         href: '#home' },
-    { key: 'about',        href: '#about' },
-    { key: 'services',     href: '#services' },
-    { key: 'projects',     href: '#projects' },
-    { key: 'certificates', href: '#certificates' },
-    { key: 'skills',       href: '#skills' },
-    { key: 'contact',      href: '#contact' },
-  ]
-
   return (
     <header>
-      {/* ── Mobile overlay ────────────────────────────────────────────── */}
+      {/* Mobile overlay */}
       {navOpen && (
         <div
           className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] md:hidden"
@@ -77,7 +126,7 @@ export default function Header() {
         />
       )}
 
-      {/* ── Main navbar pill ──────────────────────────────────────────── */}
+      {/* Navbar pill */}
       <div className={navClass}>
 
         {/* Logo */}
@@ -91,7 +140,7 @@ export default function Header() {
         {/* Desktop nav links */}
         <nav className="hidden md:block" aria-label="Primary">
           <ul className="flex items-center gap-6">
-            {navLinks.map(({ key, href }) => (
+            {NAV_LINKS.map(({ key, href }) => (
               <li key={key}>
                 <a
                   href={href}
@@ -105,7 +154,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Right side: language picker + burger ───────────────────────── */}
+        {/* Right side controls */}
         <div className="flex items-center gap-3">
 
           {/* Language picker */}
@@ -118,23 +167,12 @@ export default function Header() {
             >
               <GlobeIcon />
               <span>{lang === 'en' ? 'EN' : 'ID'}</span>
-              {/* Chevron */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-                className={`transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`}
-              >
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
+              <ChevronIcon open={langOpen} />
             </button>
 
-            {/* Dropdown */}
             {langOpen && (
               <div className="absolute right-0 top-full mt-2 w-36 bg-[#0d0d18]/95 border border-zinc-800 rounded-xl shadow-2xl backdrop-blur-md overflow-hidden z-50">
-                {[
-                  { code: 'en', label: 'English', flag: '🇬🇧' },
-                  { code: 'id', label: 'Indonesia', flag: '🇮🇩' },
-                ].map(({ code, label, flag }) => (
+                {LANGUAGES.map(({ code, label, flag }) => (
                   <button
                     key={code}
                     onClick={() => { setLang(code); setLangOpen(false) }}
@@ -146,13 +184,7 @@ export default function Header() {
                   >
                     <span className="text-base leading-none">{flag}</span>
                     {label}
-                    {lang === code && (
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-                        className="ml-auto text-blue-500">
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                    )}
+                    {lang === code && <CheckIcon />}
                   </button>
                 ))}
               </div>
@@ -172,14 +204,14 @@ export default function Header() {
           </button>
         </div>
 
-        {/* ── Mobile nav drawer (slide down) ─────────────────────────────── */}
+        {/* Mobile nav drawer */}
         <nav
           className={`fixed top-0 left-0 w-full bg-[#0c0c14]/98 z-[100] flex flex-col pt-24 pb-10 px-8 border-b border-zinc-800/80 shadow-2xl transition-all duration-300 md:hidden ${navOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}
           aria-label="Mobile"
         >
           <span className="font-heading text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-6 text-center block">MENU</span>
           <ul className="flex flex-col gap-6 items-center text-center">
-            {navLinks.map(({ key, href }) => (
+            {NAV_LINKS.map(({ key, href }) => (
               <li key={key} className="w-full">
                 <a
                   href={href}

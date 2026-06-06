@@ -1,26 +1,59 @@
 import React from 'react'
 import { useLang } from '../context/LanguageContext'
 
-const serviceIcons = [
-  // UI/UX
-  <svg key="uiux" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-    fill="none" stroke="var(--accent-blue)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+// ── Icons ────────────────────────────────────────────────────────────────────
+
+const IconFrontEnd = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="var(--accent-blue)"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <polyline points="16 18 22 12 16 6" />
+    <polyline points="8 6 2 12 8 18" />
+  </svg>
+)
+
+const IconMarketing = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="var(--accent-blue)"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+  </svg>
+)
+
+const IconDesign = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24" height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="var(--accent-blue)"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <rect width="18" height="18" x="3" y="3" rx="2" />
     <path d="M21 16V8a2 2 0 0 0-2-2h-5l-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z" />
     <path d="m9 14 2-2 4 4" />
-  </svg>,
-  // Marketing
-  <svg key="mkt" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-    fill="none" stroke="var(--accent-blue)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-  </svg>,
-  // Web Dev
-  <svg key="web" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-    fill="none" stroke="var(--accent-blue)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="16 18 22 12 16 6" />
-    <polyline points="8 6 2 12 8 18" />
-  </svg>,
-]
+  </svg>
+)
+
+const SERVICE_ICONS = [<IconFrontEnd key="fe" />, <IconMarketing key="mkt" />, <IconDesign key="des" />]
+
+// ── Component ────────────────────────────────────────────────────────────────
 
 export default function Services() {
   const { t } = useLang()
@@ -44,13 +77,13 @@ export default function Services() {
           </h2>
         </div>
 
-        {/* Cards */}
+        {/* Service cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {s.items.map((item, idx) => (
             <div key={idx} className="service-card p-8 md:p-10 rounded-2xl flex flex-col items-start text-left group">
               <div className="flex justify-between items-center w-full mb-8">
                 <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors duration-300">
-                  {serviceIcons[idx]}
+                  {SERVICE_ICONS[idx]}
                 </div>
                 <span className="font-body text-zinc-600 text-sm font-bold tracking-wider">
                   {String(idx + 1).padStart(3, '0')}
