@@ -57,9 +57,9 @@ export const translations = {
       label:   'Showcase',
       heading: 'Certifications',
       items: [
-        { title: 'Web Programming Basics',      provider: 'Dicoding',  year: '2026', desc: 'Learned fundamental web technologies including HTML structure, styling with CSS, and responsive layouts.' },
         { title: 'Front-End Web Development',   provider: 'BTNG DNCC', year: '2025', desc: 'Acquired hands-on experience building interactive and responsive web applications with JavaScript.' },
-        { title: 'AI Programming Fundamentals', provider: 'Dicoding',  year: '2025', desc: 'Learned the fundamentals of Artificial Intelligence, including machine learning concepts and neural networks.' },
+        { title: 'AI Fundamentals',             provider: 'Dicoding',  year: '2025', desc: 'Learned the fundamentals of Artificial Intelligence, including machine learning concepts and neural networks.' },
+        { title: 'Web Programming Basics',      provider: 'Dicoding',  year: '2026', desc: 'Learned fundamental web technologies including HTML structure, styling with CSS, and responsive layouts.' },
         { title: 'JavaScript Programming',      provider: 'Dicoding',  year: '2026', desc: 'Learned the fundamentals of JavaScript and ES6 features.' },
       ],
     },
@@ -161,9 +161,9 @@ export const translations = {
       label:   'Pencapaian',
       heading: 'Sertifikasi',
       items: [
-        { title: 'Dasar Pemrograman Web',      provider: 'Dicoding',  year: '2026', desc: 'Mempelajari teknologi web dasar termasuk struktur HTML, styling dengan CSS, dan tata letak responsif.' },
         { title: 'Pengembangan Front-End Web', provider: 'BTNG DNCC', year: '2025', desc: 'Mendapatkan pengalaman praktis membangun aplikasi web interaktif dan responsif menggunakan JavaScript.' },
-        { title: 'Dasar Pemrograman AI',       provider: 'Dicoding',  year: '2025', desc: 'Mempelajari dasar-dasar Kecerdasan Buatan (AI), termasuk konsep pembelajaran mesin dan jaringan saraf.' },
+        { title: 'Dasar AI',                   provider: 'Dicoding',  year: '2025', desc: 'Mempelajari dasar-dasar Kecerdasan Buatan (AI), termasuk konsep pembelajaran mesin dan jaringan saraf.' },
+        { title: 'Dasar Pemrograman Web',      provider: 'Dicoding',  year: '2026', desc: 'Mempelajari teknologi web dasar termasuk struktur HTML, styling dengan CSS, dan tata letak responsif.' },
         { title: 'Pemrograman JavaScript',     provider: 'Dicoding',  year: '2026', desc: 'Mempelajari dasar-dasar JavaScript dan fitur ES6.' },
       ],
     },

@@ -4,9 +4,9 @@ import { useLang } from '../context/LanguageContext'
 // ── Constants ─────────────────────────────────────────────────────────────────
 
 const CERT_IMAGES = [
-  '/image/sertifikat/sertifwebistedicoding.jpg',
   '/image/sertifikat/sertifbtngweb.jpeg',
   '/image/sertifikat/sertifaidicoding.jpg',
+  '/image/sertifikat/sertifwebistedicoding.jpg',
   '/image/sertifikat/sertifjsdicoding.jpg',
 ]
 

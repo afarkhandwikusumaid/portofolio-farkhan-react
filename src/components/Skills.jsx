@@ -65,16 +65,23 @@ export default function Skills() {
             </h3>
             <p className="text-zinc-400 font-body text-sm leading-relaxed mb-10">{s.expertiseText}</p>
 
-            <div className="flex flex-wrap gap-3">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
               {s.skillBars.map((skill) => (
-                <div
+                <li
                   key={skill.name}
-                  className="px-5 py-3 rounded-xl bg-zinc-900/40 border border-zinc-800/60 text-xs font-body font-bold uppercase tracking-wider text-blue-400 hover:border-blue-500 hover:bg-blue-500/5 transition-all duration-300 cursor-default"
+                  className="flex items-center gap-4 group"
                 >
-                  {skill.name}
-                </div>
+                  <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center border border-blue-500/20 group-hover:bg-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300 shrink-0">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                  </div>
+                  <span className="font-body text-sm md:text-base font-bold text-zinc-300 group-hover:text-white transition-colors duration-300 tracking-wide">
+                    {skill.name}
+                  </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
         </div>
