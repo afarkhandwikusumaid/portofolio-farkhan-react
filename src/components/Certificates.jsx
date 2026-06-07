@@ -7,6 +7,7 @@ const CERT_IMAGES = [
   '/image/sertifikat/sertifwebistedicoding.jpg',
   '/image/sertifikat/sertifbtngweb.jpeg',
   '/image/sertifikat/sertifaidicoding.jpg',
+  '/image/sertifikat/sertifjsdicoding.jpg',
 ]
 
 // ── Component ────────────────────────────────────────────────────────────────
