@@ -1,7 +1,24 @@
 import React from 'react'
 import { useLang } from '../context/LanguageContext'
 
-// ── Static data ──────────────────────────────────────────────────────────────
+// ── Static data ───────────────────────────────────────────────────────────────
+
+const PROJECTS = [
+  {
+    image: '/image/purielena.jpg',
+    link:  'https://purielena.com',
+  },
+  {
+    image: '/image/peradikharisma.png',
+    link:  'https://peradikharisma.org',
+  },
+  {
+    image: '/image/pointcut.jpg',
+    link:  'https://pointcut-hairstudio.com',
+  },
+]
+
+// ── Icons ─────────────────────────────────────────────────────────────────────
 
 const ArrowIcon = () => (
   <svg
@@ -19,19 +36,7 @@ const ArrowIcon = () => (
   </svg>
 )
 
-const PROJECT_IMAGES = [
-  '/image/purielena.jpg',
-  '/image/peradikharisma.png',
-  '/image/pointcut.jpg',
-]
-
-const PROJECT_LINKS = [
-  'https://purielena.com',
-  'https://peradikharisma.org',
-  'https://pointcut-hairstudio.com',
-]
-
-// ── Component ────────────────────────────────────────────────────────────────
+// ── Component ─────────────────────────────────────────────────────────────────
 
 export default function Projects() {
   const { t } = useLang()
@@ -44,11 +49,13 @@ export default function Projects() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-        {/* Section title */}
+        {/* Section heading */}
         <div className="flex flex-col items-center text-center mb-16">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-8 h-[1px] bg-blue-500" />
-            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">{p.label}</span>
+            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">
+              {p.label}
+            </span>
             <span className="w-8 h-[1px] bg-blue-500" />
           </div>
           <h2 className="font-heading text-2xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
@@ -64,7 +71,7 @@ export default function Projects() {
               {/* Thumbnail */}
               <div className="w-full aspect-[16/10] rounded-xl overflow-hidden mb-6 border border-zinc-800/80 bg-zinc-950 relative">
                 <img
-                  src={PROJECT_IMAGES[idx]}
+                  src={PROJECTS[idx].image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   loading="lazy"
@@ -80,7 +87,10 @@ export default function Projects() {
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="px-2.5 py-1 rounded bg-zinc-900/60 border border-zinc-800 text-[10px] font-body tracking-wider text-zinc-400">
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded bg-zinc-900/60 border border-zinc-800 text-[10px] font-body tracking-wider text-zinc-400"
+                  >
                     {tag}
                   </span>
                 ))}
@@ -92,7 +102,7 @@ export default function Projects() {
 
               {/* CTA */}
               <a
-                href={PROJECT_LINKS[idx]}
+                href={PROJECTS[idx].link}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full py-3 rounded-lg border border-zinc-800 bg-zinc-900/40 hover:bg-blue-500/10 hover:border-blue-500 text-center text-white font-body text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 group/btn"

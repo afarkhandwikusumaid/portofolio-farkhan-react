@@ -1,6 +1,8 @@
 import React from 'react'
 import { useLang } from '../context/LanguageContext'
 
+// ── About component ───────────────────────────────────────────────────────────
+
 export default function About() {
   const { t } = useLang()
   const a = t.about
@@ -49,26 +51,26 @@ export default function About() {
         <div className="lg:col-span-7 flex flex-col items-start text-left">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-8 h-[1px] bg-blue-500" />
-            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">{a.label}</span>
+            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">
+              {a.label}
+            </span>
           </div>
 
           <h2 className="font-heading text-2xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">
             {a.heading}
           </h2>
 
-          <p className="text-zinc-400 font-body text-sm md:text-base leading-relaxed mb-6">
-            {a.bio1}
-          </p>
-          <p className="text-zinc-400 font-body text-sm md:text-base leading-relaxed mb-10">
-            {a.bio2}
-          </p>
+          <p className="text-zinc-400 font-body text-sm md:text-base leading-relaxed mb-6">{a.bio1}</p>
+          <p className="text-zinc-400 font-body text-sm md:text-base leading-relaxed mb-10">{a.bio2}</p>
 
-          {/* Stats Display */}
+          {/* Stats */}
           <div className="w-full mt-2">
             <div className="grid grid-cols-3 gap-4">
-              {(a.stats || []).map((stat, idx) => {
-                const [val, ...rest] = stat.split(' ')
-                const labelText = rest.join(' ')
+              {a.stats.map((stat, idx) => {
+                // Split only on first space to correctly handle multi-word values like "5+"
+                const spaceIdx = stat.indexOf(' ')
+                const val       = spaceIdx !== -1 ? stat.slice(0, spaceIdx) : stat
+                const label     = spaceIdx !== -1 ? stat.slice(spaceIdx + 1) : ''
                 return (
                   <div
                     key={idx}
@@ -78,7 +80,7 @@ export default function About() {
                       {val}
                     </span>
                     <span className="font-body text-[10px] md:text-xs uppercase tracking-wider text-zinc-400 font-bold">
-                      {labelText}
+                      {label}
                     </span>
                   </div>
                 )

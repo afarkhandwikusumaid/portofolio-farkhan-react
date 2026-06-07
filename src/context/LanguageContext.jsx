@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useState } from 'react'
 
+// ── Translations ──────────────────────────────────────────────────────────────
+
 export const translations = {
   en: {
     nav: {
@@ -35,8 +37,8 @@ export const translations = {
       heading: 'Specialized In',
       items: [
         { title: 'Front-End Web Development', desc: 'Building responsive web applications specializing in React.js and seamless API integrations.' },
-        { title: 'B2B Marketing',          desc: 'Developing digital marketing strategies and building engagement for yearbook creative production companies.' },
-        { title: 'UI/UX Design',           desc: 'Designing intuitive user journeys, clean interfaces, and custom design systems for modern platforms.' },
+        { title: 'B2B Marketing',             desc: 'Developing digital marketing strategies and building engagement for yearbook creative production companies.' },
+        { title: 'UI/UX Design',             desc: 'Designing intuitive user journeys, clean interfaces, and custom design systems for modern platforms.' },
       ],
     },
 
@@ -45,9 +47,9 @@ export const translations = {
       heading:   'Featured Projects',
       visitSite: 'VISIT SITE',
       items: [
-        { title: 'Puri Elena',          desc: 'An elegant digital presence developed for Puri Elena. Incorporating lightweight interfaces and customized client workflow layouts.',                           tags: ['React', 'Tailwind'] },
-        { title: 'Peradi Kharisma',    desc: 'Official platform for Peradi Kharisma. Built with a robust layout system to provide clear informational portals and accessibility.',                     tags: ['HTML', 'CSS', 'JS'] },
-        { title: 'Pointcut Hair Studio', desc: 'Interactive booking and styling catalogue website for Pointcut Hair Studio. Designed with smooth micro-interactions.',                                  tags: ['React', 'Tailwind'] },
+        { title: 'Puri Elena',           desc: 'An elegant digital presence developed for Puri Elena. Incorporating lightweight interfaces and customized client workflow layouts.',                         tags: ['React', 'Tailwind'] },
+        { title: 'Peradi Kharisma',     desc: 'Official platform for Peradi Kharisma. Built with a robust layout system to provide clear informational portals and accessibility.',                      tags: ['HTML', 'CSS', 'JS'] },
+        { title: 'Pointcut Hair Studio', desc: 'Interactive booking and styling catalogue website for Pointcut Hair Studio. Designed with smooth micro-interactions.',                                   tags: ['React', 'Tailwind'] },
       ],
     },
 
@@ -55,10 +57,10 @@ export const translations = {
       label:   'Showcase',
       heading: 'Certifications',
       items: [
-        { title: 'Web Programming Basics',    provider: 'Dicoding',   year: '2026', desc: 'Learned fundamental web technologies including HTML structure, styling with CSS, and responsive layouts.' },
-        { title: 'Front-End Web Development', provider: 'BTNG DNCC',  year: '2025', desc: 'Acquired hands-on experience building interactive and responsive web applications with JavaScript' },
-        { title: 'AI Programming Fundamentals', provider: 'Dicoding', year: '2025', desc: 'Learned the fundamentals of Artificial Intelligence, including machine learning concepts and neural networks.' },
-        { title: 'JavaScript Programming',    provider: 'Dicoding',   year: '2026', desc: 'Learned the fundamentals of JavaScript, and ES6 features' },
+        { title: 'Web Programming Basics',      provider: 'Dicoding',  year: '2026', desc: 'Learned fundamental web technologies including HTML structure, styling with CSS, and responsive layouts.' },
+        { title: 'Front-End Web Development',   provider: 'BTNG DNCC', year: '2025', desc: 'Acquired hands-on experience building interactive and responsive web applications with JavaScript.' },
+        { title: 'AI Programming Fundamentals', provider: 'Dicoding',  year: '2025', desc: 'Learned the fundamentals of Artificial Intelligence, including machine learning concepts and neural networks.' },
+        { title: 'JavaScript Programming',      provider: 'Dicoding',  year: '2026', desc: 'Learned the fundamentals of JavaScript and ES6 features.' },
       ],
     },
 
@@ -69,20 +71,20 @@ export const translations = {
       expertiseLabel: 'Technical Expertise',
       expertiseText:  'I focus on crafting pixel-perfect interfaces and solid web structures. My learning path is oriented around building responsive software systems.',
       education: [
-        { institution: 'UNIVERSITAS DIAN NUSWANTORO', program: 'Teknik Informatika',  years: '2025 – Now' },
-        { institution: 'SMA N 1 BATANG',              program: 'IPA (Science)',        years: '2022 – 2025' },
+        { institution: 'UNIVERSITAS DIAN NUSWANTORO', program: 'Teknik Informatika', years: '2025 – Now' },
+        { institution: 'SMA N 1 BATANG',              program: 'IPA (Science)',       years: '2022 – 2025' },
       ],
       skillBars: [
-        { name: 'HTML & CSS',        value: 92 },
-        { name: 'JavaScript',        value: 85 },
-        { name: 'React',             value: 80 },
-        { name: 'Next.js',           value: 72 },
-        { name: 'Technical Analysis',value: 85 },
-        { name: 'Marketing',         value: 90 },
-        { name: 'Communication',     value: 88 },
-        { name: 'Research',          value: 80 },
-        { name: 'Analysis',          value: 85 },
-        { name: 'Problem Solving',   value: 90 },
+        { name: 'HTML & CSS'       },
+        { name: 'JavaScript'       },
+        { name: 'React'            },
+        { name: 'Next.js'          },
+        { name: 'Technical Analysis'},
+        { name: 'Marketing'        },
+        { name: 'Communication'    },
+        { name: 'Research'         },
+        { name: 'Analysis'         },
+        { name: 'Problem Solving'  },
       ],
     },
 
@@ -104,7 +106,7 @@ export const translations = {
     },
   },
 
-  // ── Indonesian ─────────────────────────────────────────────────────────────
+  // ── Indonesian ──────────────────────────────────────────────────────────────
   id: {
     nav: {
       home:         'Beranda',
@@ -139,8 +141,8 @@ export const translations = {
       heading: 'Keahlian Khusus',
       items: [
         { title: 'Front-End Web Development', desc: 'Membangun aplikasi web responsif dengan spesialisasi pada React.js dan integrasi API yang mulus.' },
-        { title: 'B2B Marketing',          desc: 'Mengembangkan strategi pemasaran digital dan membangun engagement untuk perusahaan vendor buku tahunan.' },
-        { title: 'Desain UI/UX',           desc: 'Merancang perjalanan pengguna yang intuitif, antarmuka yang bersih, dan sistem desain kustom untuk platform modern.' },
+        { title: 'B2B Marketing',             desc: 'Mengembangkan strategi pemasaran digital dan membangun engagement untuk perusahaan vendor buku tahunan.' },
+        { title: 'Desain UI/UX',             desc: 'Merancang perjalanan pengguna yang intuitif, antarmuka yang bersih, dan sistem desain kustom untuk platform modern.' },
       ],
     },
 
@@ -149,9 +151,9 @@ export const translations = {
       heading:   'Proyek Unggulan',
       visitSite: 'KUNJUNGI SITUS',
       items: [
-        { title: 'Puri Elena',            desc: 'Kehadiran digital elegan yang dikembangkan untuk Puri Elena. Menggabungkan antarmuka ringan dan tata letak alur kerja klien yang disesuaikan.',                     tags: ['React', 'Tailwind'] },
-        { title: 'Peradi Kharisma',      desc: 'Platform resmi untuk Peradi Kharisma. Dibangun dengan sistem tata letak yang kokoh untuk menyajikan portal informasi yang jelas dan aksesibel.',                 tags: ['HTML', 'CSS', 'JS'] },
-        { title: 'Pointcut Hair Studio', desc: 'Website booking interaktif dan katalog gaya untuk Pointcut Hair Studio. Dibangun dengan micro-interaction yang halus.',                                           tags: ['React', 'Tailwind'] },
+        { title: 'Puri Elena',           desc: 'Kehadiran digital elegan yang dikembangkan untuk Puri Elena. Menggabungkan antarmuka ringan dan tata letak alur kerja klien yang disesuaikan.',                    tags: ['React', 'Tailwind'] },
+        { title: 'Peradi Kharisma',     desc: 'Platform resmi untuk Peradi Kharisma. Dibangun dengan sistem tata letak yang kokoh untuk menyajikan portal informasi yang jelas dan aksesibel.',                tags: ['HTML', 'CSS', 'JS'] },
+        { title: 'Pointcut Hair Studio', desc: 'Website booking interaktif dan katalog gaya untuk Pointcut Hair Studio. Dibangun dengan micro-interaction yang halus.',                                          tags: ['React', 'Tailwind'] },
       ],
     },
 
@@ -159,10 +161,10 @@ export const translations = {
       label:   'Pencapaian',
       heading: 'Sertifikasi',
       items: [
-        { title: 'Dasar Pemrograman Web',     provider: 'Dicoding',  year: '2026', desc: 'Mempelajari teknologi web dasar termasuk struktur HTML, styling dengan CSS, dan tata letak responsif.' },
+        { title: 'Dasar Pemrograman Web',      provider: 'Dicoding',  year: '2026', desc: 'Mempelajari teknologi web dasar termasuk struktur HTML, styling dengan CSS, dan tata letak responsif.' },
         { title: 'Pengembangan Front-End Web', provider: 'BTNG DNCC', year: '2025', desc: 'Mendapatkan pengalaman praktis membangun aplikasi web interaktif dan responsif menggunakan JavaScript.' },
-        { title: 'Dasar Pemrograman AI',      provider: 'Dicoding',  year: '2025', desc: 'Mempelajari dasar-dasar Kecerdasan Buatan (AI), termasuk konsep pembelajaran mesin dan jaringan saraf.' },
-        { title: 'Pemrograman JavaScript',    provider: 'Dicoding',  year: '2026', desc: 'Mempelajari dasar-dasar JavaScript, dan fitur ES6' },
+        { title: 'Dasar Pemrograman AI',       provider: 'Dicoding',  year: '2025', desc: 'Mempelajari dasar-dasar Kecerdasan Buatan (AI), termasuk konsep pembelajaran mesin dan jaringan saraf.' },
+        { title: 'Pemrograman JavaScript',     provider: 'Dicoding',  year: '2026', desc: 'Mempelajari dasar-dasar JavaScript dan fitur ES6.' },
       ],
     },
 
@@ -177,16 +179,16 @@ export const translations = {
         { institution: 'SMA N 1 BATANG',              program: 'IPA (Ilmu Pengetahuan Alam)', years: '2022 – 2025' },
       ],
       skillBars: [
-        { name: 'HTML & CSS',         value: 92 },
-        { name: 'JavaScript',         value: 85 },
-        { name: 'React',              value: 80 },
-        { name: 'Next.js',            value: 72 },
-        { name: 'Analisis Teknikal',  value: 85 },
-        { name: 'Pemasaran',          value: 90 },
-        { name: 'Komunikasi',         value: 88 },
-        { name: 'Penelitian',         value: 80 },
-        { name: 'Analisis',           value: 85 },
-        { name: 'Pemecahan Masalah',  value: 90 },
+        { name: 'HTML & CSS'      },
+        { name: 'JavaScript'      },
+        { name: 'React'           },
+        { name: 'Next.js'         },
+        { name: 'Analisis Teknikal'},
+        { name: 'Pemasaran'       },
+        { name: 'Komunikasi'      },
+        { name: 'Penelitian'      },
+        { name: 'Analisis'        },
+        { name: 'Pemecahan Masalah'},
       ],
     },
 
@@ -209,7 +211,8 @@ export const translations = {
   },
 }
 
-// ── Context ────────────────────────────────────────────────────────────────
+// ── Context ───────────────────────────────────────────────────────────────────
+
 const LanguageContext = createContext(null)
 
 export function LanguageProvider({ children }) {
@@ -222,6 +225,12 @@ export function LanguageProvider({ children }) {
   )
 }
 
+/**
+ * Hook to access language context.
+ * Must be used inside <LanguageProvider>.
+ */
 export function useLang() {
-  return useContext(LanguageContext)
+  const ctx = useContext(LanguageContext)
+  if (!ctx) throw new Error('useLang must be used within a LanguageProvider')
+  return ctx
 }

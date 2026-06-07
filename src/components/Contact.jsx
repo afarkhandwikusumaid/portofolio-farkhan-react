@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useLang } from '../context/LanguageContext'
 
-// ── Icons ────────────────────────────────────────────────────────────────────
+// ── Icons ─────────────────────────────────────────────────────────────────────
 
 const IconLocation = () => (
   <svg
@@ -50,17 +50,23 @@ const IconEmail = () => (
   </svg>
 )
 
-// ── Component ────────────────────────────────────────────────────────────────
+// Static contact info that doesn't change with language
+const CONTACT_INFO_STATIC = [
+  { title: 'Phone', value: '(+62) 859 4462 9716',          Icon: IconPhone    },
+  { title: 'Email', value: 'farkhandwikusuma.id@gmail.com', Icon: IconEmail    },
+]
+
+// ── Component ─────────────────────────────────────────────────────────────────
 
 export default function Contact() {
   const { t } = useLang()
   const c = t.contact
 
-  const contactInfo = [
-    { title: 'Location', value: c.location,                     icon: <IconLocation /> },
-    { title: 'Phone',    value: '(+62) 859 4462 9716',          icon: <IconPhone /> },
-    { title: 'Email',    value: 'farkhandwikusuma.id@gmail.com', icon: <IconEmail /> },
-  ]
+  // Location uses translated value; merge with static entries
+  const contactInfo = useMemo(() => [
+    { title: 'Location', value: c.location, Icon: IconLocation },
+    ...CONTACT_INFO_STATIC,
+  ], [c.location])
 
   return (
     <section id="contact" className="py-24 bg-[#0a0a0f] relative overflow-hidden space-grid">
@@ -68,11 +74,13 @@ export default function Contact() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-        {/* Section title */}
+        {/* Section heading */}
         <div className="flex flex-col items-start text-left mb-16">
           <div className="flex items-center gap-3 mb-4">
             <span className="w-8 h-[1px] bg-blue-500" />
-            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">{c.label}</span>
+            <span className="font-body text-[10px] md:text-xs font-bold tracking-widest text-blue-500 uppercase">
+              {c.label}
+            </span>
           </div>
           <h2 className="font-heading text-2xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
             {c.heading}
@@ -84,17 +92,21 @@ export default function Contact() {
 
           {/* Info cards */}
           <div className="lg:col-span-5 flex flex-col gap-5">
-            {contactInfo.map((info) => (
+            {contactInfo.map(({ title, value, Icon }) => (
               <div
-                key={info.title}
+                key={title}
                 className="flex items-center gap-5 p-5 rounded-xl bg-zinc-900/40 border border-zinc-800/80 hover:border-zinc-700/80 transition-colors duration-300 backdrop-blur-sm"
               >
                 <div className="w-12 h-12 rounded-lg bg-zinc-950 flex items-center justify-center border border-zinc-800/80 shrink-0">
-                  {info.icon}
+                  <Icon />
                 </div>
                 <div className="flex flex-col min-w-0">
-                  <span className="font-heading text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">{info.title}</span>
-                  <span className="font-body text-xs md:text-sm text-white break-all">{info.value}</span>
+                  <span className="font-heading text-[10px] uppercase tracking-widest text-zinc-500 font-bold mb-1">
+                    {title}
+                  </span>
+                  <span className="font-body text-xs md:text-sm text-white break-all">
+                    {value}
+                  </span>
                 </div>
               </div>
             ))}
@@ -106,18 +118,26 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col">
-                  <label htmlFor="name" className="font-body text-xs text-zinc-500 uppercase tracking-wider mb-2">{c.nameLabel}</label>
+                  <label htmlFor="name" className="font-body text-xs text-zinc-500 uppercase tracking-wider mb-2">
+                    {c.nameLabel}
+                  </label>
                   <input
-                    type="text" id="name" name="name"
+                    type="text"
+                    id="name"
+                    name="name"
                     placeholder={c.namePlaceholder}
                     required
                     className="px-4 py-3 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-blue-500 focus:outline-none text-zinc-100 font-body text-sm placeholder-zinc-700 transition-colors duration-300"
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="email" className="font-body text-xs text-zinc-500 uppercase tracking-wider mb-2">{c.emailLabel}</label>
+                  <label htmlFor="email" className="font-body text-xs text-zinc-500 uppercase tracking-wider mb-2">
+                    {c.emailLabel}
+                  </label>
                   <input
-                    type="email" id="email" name="email"
+                    type="email"
+                    id="email"
+                    name="email"
                     placeholder={c.emailPlaceholder}
                     required
                     className="px-4 py-3 rounded-lg bg-zinc-950 border border-zinc-800 focus:border-blue-500 focus:outline-none text-zinc-100 font-body text-sm placeholder-zinc-700 transition-colors duration-300"
@@ -126,9 +146,12 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col">
-                <label htmlFor="message" className="font-body text-xs text-zinc-500 uppercase tracking-wider mb-2">{c.messageLabel}</label>
+                <label htmlFor="message" className="font-body text-xs text-zinc-500 uppercase tracking-wider mb-2">
+                  {c.messageLabel}
+                </label>
                 <textarea
-                  id="message" name="message"
+                  id="message"
+                  name="message"
                   rows="6"
                   placeholder={c.messagePlaceholder}
                   required
