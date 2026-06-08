@@ -26,8 +26,8 @@ export const translations = {
 
     about: {
       label:   'About Me',
-      heading: 'FRONT-END WEB DEVELOPER & B2B MARKETING',
-      bio1:    'I am an Informatics Engineering student at Dian Nuswantoro University (UDINUS) focusing on Front-End Web Development (React.js). Outside of coding, I have a track record in B2B Marketing, specifically in building engagement and digital marketing strategies for creative production vendors.',
+      heading: 'FRONT-END WEB DEVELOPER & FREELANCE MARKETING SPECIALIST',
+      bio1:    'I am an Informatics Engineering student at Dian Nuswantoro University (UDINUS) focusing on Front-End Web Development (React.js). Outside of coding, I have a track record as a Freelance Marketing Specialist, specifically in building engagement and digital marketing strategies for creative production vendors.',
       bio2:    'I currently work as a freelance marketing specialist for yearbook vendor companies. This combination of programming skills and market awareness enables me to approach software development from both angles: clean code architecture and real business/user needs.',
       stats:   ['1 YEAR EXPERIENCE', '5+ PROJECTS', '5 CLIENTS SERVED'],
     },
@@ -37,7 +37,7 @@ export const translations = {
       heading: 'Specialized In',
       items: [
         { title: 'Front-End Web Development', desc: 'Building responsive web applications specializing in React.js and seamless API integrations.' },
-        { title: 'B2B Marketing',             desc: 'Developing digital marketing strategies and building engagement for yearbook creative production companies.' },
+        { title: 'Freelance Marketing Specialist', desc: 'Developing digital marketing strategies and building engagement for yearbook creative production companies as a freelance specialist.' },
         { title: 'UI/UX Design',             desc: 'Designing intuitive user journeys, clean interfaces, and custom design systems for modern platforms.' },
       ],
     },
@@ -61,7 +61,7 @@ export const translations = {
         { title: 'AI Fundamentals',             provider: 'Dicoding',  year: '2025', desc: 'Learned the fundamentals of Artificial Intelligence, including machine learning concepts and neural networks.' },
         { title: 'Web Programming Basics',      provider: 'Dicoding',  year: '2026', desc: 'Learned fundamental web technologies including HTML structure, styling with CSS, and responsive layouts.' },
         { title: 'JavaScript Programming',      provider: 'Dicoding',  year: '2026', desc: 'Learned the fundamentals of JavaScript and ES6 features.' },
-        { title: 'Front-End Web Development',   provider: 'Dicoding',  year: '2026', desc: 'Learned the fundamentals of JavaScript and ES6 features.' },
+        { title: 'Front-End Web Development',   provider: 'Dicoding',  year: '2026', desc: 'Learned how to create a website using frontend technologies and basics of react.' },
       ],
     },
 
@@ -131,8 +131,8 @@ export const translations = {
 
     about: {
       label:   'Tentang Saya',
-      heading: 'FRONT-END WEB DEVELOPER & B2B MARKETING',
-      bio1:    'Saya adalah mahasiswa Teknik Informatika UDINUS yang berfokus pada pengembangan Front-End Web Development (React.js). Di luar coding, saya memiliki rekam jejak di bidang B2B Marketing, khususnya dalam membangun engagement dan strategi pemasaran digital untuk vendor creative production.',
+      heading: 'FRONT-END WEB DEVELOPER & FREELANCE MARKETING SPECIALIST',
+      bio1:    'Saya adalah mahasiswa Teknik Informatika UDINUS yang berfokus pada pengembangan Front-End Web Development (React.js). Di luar coding, saya memiliki rekam jejak sebagai Freelance Marketing Specialist, khususnya dalam membangun engagement dan strategi pemasaran digital untuk vendor creative production.',
       bio2:    'Saat ini saya bekerja sebagai freelance marketing untuk perusahaan vendor yearbook. Kombinasi antara pemrograman dan market awareness membuat saya mampu melihat pengembangan perangkat lunak dari dua sisi: arsitektur kode yang bersih dan kebutuhan riil bisnis/pengguna.',
       stats:   ['1 TAHUN PENGALAMAN', '5+ PROYEK', '5 KLIEN DILAYANI'],
     },
@@ -142,7 +142,7 @@ export const translations = {
       heading: 'Keahlian Khusus',
       items: [
         { title: 'Front-End Web Development', desc: 'Membangun aplikasi web responsif dengan spesialisasi pada React.js dan integrasi API yang mulus.' },
-        { title: 'B2B Marketing',             desc: 'Mengembangkan strategi pemasaran digital dan membangun engagement untuk perusahaan vendor buku tahunan.' },
+        { title: 'Freelance Marketing Specialist', desc: 'Mengembangkan strategi pemasaran digital dan membangun engagement untuk perusahaan vendor buku tahunan secara lepas (freelance).' },
         { title: 'Desain UI/UX',             desc: 'Merancang perjalanan pengguna yang intuitif, antarmuka yang bersih, dan sistem desain kustom untuk platform modern.' },
       ],
     },
