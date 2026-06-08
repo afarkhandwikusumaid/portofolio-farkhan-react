@@ -8,6 +8,7 @@ const CERT_IMAGES = [
   '/image/sertifikat/sertifaidicoding.jpg',
   '/image/sertifikat/sertifwebistedicoding.jpg',
   '/image/sertifikat/sertifjsdicoding.jpg',
+  '/image/sertifikat/sertiffrontenddicoding.jpg',
 ]
 
 const DRAG_THRESHOLD = 40  // px
@@ -238,19 +239,19 @@ export default function Certificates() {
                     </div>
                   </div>
 
-                  {/* Year badge */}
-                  <div className="flex justify-end w-full mb-4">
+                  {/* Provider & Year badge */}
+                  <div className="flex justify-between items-center w-full mb-4">
+                    <span className="font-body text-[10px] font-bold text-blue-500 uppercase tracking-wider">
+                      {cert.provider}
+                    </span>
                     <span className="font-body text-[10px] font-bold bg-zinc-900/60 border border-zinc-800 px-3 py-1 rounded-full text-zinc-400">
                       {cert.year}
                     </span>
                   </div>
 
-                  <h3 className="font-heading text-base md:text-lg font-bold uppercase tracking-tight text-white mb-1">
+                  <h3 className="font-heading text-base md:text-lg font-bold uppercase tracking-tight text-white mb-3 min-h-[3rem] md:min-h-[3.5rem]">
                     {cert.title}
                   </h3>
-                  <span className="font-body text-[10px] font-bold text-blue-500 mb-3 block uppercase tracking-wider">
-                    {cert.provider}
-                  </span>
                   <p className="text-zinc-400 font-body text-xs leading-relaxed flex-grow">
                     {cert.desc}
                   </p>

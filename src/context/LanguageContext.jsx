@@ -61,6 +61,7 @@ export const translations = {
         { title: 'AI Fundamentals',             provider: 'Dicoding',  year: '2025', desc: 'Learned the fundamentals of Artificial Intelligence, including machine learning concepts and neural networks.' },
         { title: 'Web Programming Basics',      provider: 'Dicoding',  year: '2026', desc: 'Learned fundamental web technologies including HTML structure, styling with CSS, and responsive layouts.' },
         { title: 'JavaScript Programming',      provider: 'Dicoding',  year: '2026', desc: 'Learned the fundamentals of JavaScript and ES6 features.' },
+        { title: 'Front-End Web Development',   provider: 'Dicoding',  year: '2026', desc: 'Learned the fundamentals of JavaScript and ES6 features.' },
       ],
     },
 
@@ -165,6 +166,7 @@ export const translations = {
         { title: 'Dasar AI',                   provider: 'Dicoding',  year: '2025', desc: 'Mempelajari dasar-dasar Kecerdasan Buatan (AI), termasuk konsep pembelajaran mesin dan jaringan saraf.' },
         { title: 'Dasar Pemrograman Web',      provider: 'Dicoding',  year: '2026', desc: 'Mempelajari teknologi web dasar termasuk struktur HTML, styling dengan CSS, dan tata letak responsif.' },
         { title: 'Pemrograman JavaScript',     provider: 'Dicoding',  year: '2026', desc: 'Mempelajari dasar-dasar JavaScript dan fitur ES6.' },
+        { title: 'Pengembangan Front-End Web', provider: 'Dicoding',  year: '2026', desc: 'Mempelajari dasar-dasar JavaScript dan fitur ES6.' },
       ],
     },
 
