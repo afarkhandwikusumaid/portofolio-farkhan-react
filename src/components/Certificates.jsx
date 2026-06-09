@@ -9,6 +9,7 @@ const CERT_IMAGES = [
   '/image/sertifikat/sertifwebistedicoding.jpg',
   '/image/sertifikat/sertifjsdicoding.jpg',
   '/image/sertifikat/sertiffrontenddicoding.jpg',
+  '/image/sertifikat/sertifreactdicoding.jpg',
 ]
 
 const DRAG_THRESHOLD = 40  // px

@@ -62,6 +62,7 @@ export const translations = {
         { title: 'Web Programming Basics',      provider: 'Dicoding',  year: '2026', desc: 'Learned fundamental web technologies including HTML structure, styling with CSS, and responsive layouts.' },
         { title: 'JavaScript Programming',      provider: 'Dicoding',  year: '2026', desc: 'Learned the fundamentals of JavaScript and ES6 features.' },
         { title: 'Front-End Web Development',   provider: 'Dicoding',  year: '2026', desc: 'Learned how to create a website using frontend technologies and basics of react.' },
+        { title: 'Web App with React',          provider: 'Dicoding',  year: '2026', desc: 'Learned how to build UI components, manage state, and leverage modern React features to create interactive and reactive user experiences.' },
       ],
     },
 
@@ -167,6 +168,7 @@ export const translations = {
         { title: 'Dasar Pemrograman Web',      provider: 'Dicoding',  year: '2026', desc: 'Mempelajari teknologi web dasar termasuk struktur HTML, styling dengan CSS, dan tata letak responsif.' },
         { title: 'Pemrograman JavaScript',     provider: 'Dicoding',  year: '2026', desc: 'Mempelajari dasar-dasar JavaScript dan fitur ES6.' },
         { title: 'Pengembangan Front-End Web', provider: 'Dicoding',  year: '2026', desc: 'Mempelajari cara membuat web dengan teknologi frontend dan dasar-dasar react.' },
+        { title: 'Aplikasi Web dengan React', provider: 'Dicoding',  year: '2026', desc: 'Membangun komponen UI, mengelola state, dan memanfaatkan fitur-fitur modern React untuk menciptakan pengalaman pengguna yang interaktif dan reaktif.' },
       ],
     },
 
