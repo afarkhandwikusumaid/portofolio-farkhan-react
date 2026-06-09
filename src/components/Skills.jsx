@@ -65,23 +65,45 @@ export default function Skills() {
             </h3>
             <p className="text-zinc-400 font-body text-sm leading-relaxed mb-10">{s.expertiseText}</p>
 
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
-              {s.skillBars.map((skill) => (
-                <li
-                  key={skill.name}
-                  className="flex items-center gap-4 group"
-                >
-                  <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center border border-blue-500/20 group-hover:bg-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300 shrink-0">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500">
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                    </svg>
-                  </div>
-                  <span className="font-body text-sm md:text-base font-bold text-zinc-300 group-hover:text-white transition-colors duration-300 tracking-wide">
-                    {skill.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <div className="mb-6">
+              <h4 className="font-heading text-xs uppercase tracking-widest text-blue-500 mb-4 font-bold">
+                Front-End Web Development
+              </h4>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
+                {s.codingSkills?.map((skill) => (
+                  <li key={skill.name} className="flex items-center gap-4 group">
+                    <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center border border-blue-500/20 group-hover:bg-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300 shrink-0">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500">
+                        <polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
+                      </svg>
+                    </div>
+                    <span className="font-body text-sm md:text-base font-bold text-zinc-300 group-hover:text-white transition-colors duration-300 tracking-wide">
+                      {skill.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-8">
+              <h4 className="font-heading text-xs uppercase tracking-widest text-green-500 mb-4 font-bold">
+                Freelance Marketing
+              </h4>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
+                {s.freelanceSkills?.map((skill) => (
+                  <li key={skill.name} className="flex items-center gap-4 group">
+                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center border border-green-500/20 group-hover:bg-green-500/20 group-hover:border-green-500/40 transition-all duration-300 shrink-0">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-green-500">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                      </svg>
+                    </div>
+                    <span className="font-body text-sm md:text-base font-bold text-zinc-300 group-hover:text-white transition-colors duration-300 tracking-wide">
+                      {skill.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
         </div>

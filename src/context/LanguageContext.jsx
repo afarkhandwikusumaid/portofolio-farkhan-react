@@ -6,12 +6,12 @@ export const translations = {
   en: {
     nav: {
       home:         'Home',
-      about:        'About',
+      about:        'About Me',
       services:     'Services',
-      projects:     'Projects',
-      certificates: 'Certificates',
-      skills:       'Skills',
-      contact:      'Contact',
+      projects:     'Portfolio',
+      certificates: 'Showcase',
+      skills:       'Learning Path',
+      contact:      'Get In Touch',
     },
 
     hero: {
@@ -47,7 +47,7 @@ export const translations = {
       items: [
         { title: 'Front-End Web Development', desc: 'Building responsive web applications specializing in React.js and seamless API integrations.' },
         { title: 'Freelance Marketing Specialist', desc: 'Developing digital marketing strategies and building engagement for yearbook creative production companies as a freelance specialist.' },
-        { title: 'UI/UX Design',             desc: 'Designing intuitive user journeys, clean interfaces, and custom design systems for modern platforms.' },
+        { title: 'Digital Experience Strategy', desc: 'Combining modern web technology concepts with marketing insights to craft interactive, audience-focused digital experiences.' },
       ],
     },
 
@@ -85,16 +85,18 @@ export const translations = {
         { institution: 'UNIVERSITAS DIAN NUSWANTORO', program: 'Teknik Informatika', years: '2025 – Now' },
         { institution: 'SMA N 1 BATANG',              program: 'IPA (Science)',       years: '2022 – 2025' },
       ],
-      skillBars: [
+      codingSkills: [
         { name: 'HTML & CSS'       },
         { name: 'JavaScript'       },
-        { name: 'React'            },
+        { name: 'React.js'         },
         { name: 'Next.js'          },
-        { name: 'Technical Analysis'},
-        { name: 'Marketing'        },
+        { name: 'Tailwind CSS'     },
+      ],
+      freelanceSkills: [
+        { name: 'Digital Marketing'},
         { name: 'Communication'    },
-        { name: 'Research'         },
-        { name: 'Analysis'         },
+        { name: 'Market Research'  },
+        { name: 'Data Analysis'    },
         { name: 'Problem Solving'  },
       ],
     },
@@ -121,12 +123,12 @@ export const translations = {
   id: {
     nav: {
       home:         'Beranda',
-      about:        'Tentang',
+      about:        'Tentang Saya',
       services:     'Layanan',
-      projects:     'Proyek',
-      certificates: 'Sertifikat',
-      skills:       'Keahlian',
-      contact:      'Kontak',
+      projects:     'Portofolio',
+      certificates: 'Pencapaian',
+      skills:       'Jalur Belajar',
+      contact:      'Hubungi Saya',
     },
 
     hero: {
@@ -162,7 +164,7 @@ export const translations = {
       items: [
         { title: 'Front-End Web Development', desc: 'Membangun aplikasi web responsif dengan spesialisasi pada React.js dan integrasi API yang mulus.' },
         { title: 'Freelance Marketing Specialist', desc: 'Mengembangkan strategi pemasaran digital dan membangun engagement yang kuat untuk perusahaan produksi kreatif sebagai spesialis lepas.' },
-        { title: 'Desain UI/UX',             desc: 'Merancang perjalanan pengguna yang intuitif, antarmuka yang bersih, dan sistem desain kustom untuk platform modern.' },
+        { title: 'Strategi Pengalaman Digital', desc: 'Menggabungkan eksplorasi teknologi web modern dengan wawasan pemasaran untuk merancang pengalaman digital yang interaktif dan berfokus pada audiens.' },
       ],
     },
 
@@ -200,16 +202,18 @@ export const translations = {
         { institution: 'UNIVERSITAS DIAN NUSWANTORO', program: 'Teknik Informatika',           years: '2025 – Sekarang' },
         { institution: 'SMA N 1 BATANG',              program: 'IPA (Ilmu Pengetahuan Alam)', years: '2022 – 2025' },
       ],
-      skillBars: [
+      codingSkills: [
         { name: 'HTML & CSS'      },
         { name: 'JavaScript'      },
-        { name: 'React'           },
+        { name: 'React.js'        },
         { name: 'Next.js'         },
-        { name: 'Analisis Teknikal'},
-        { name: 'Pemasaran'       },
+        { name: 'Tailwind CSS'    },
+      ],
+      freelanceSkills: [
+        { name: 'Digital Marketing'},
         { name: 'Komunikasi'      },
-        { name: 'Penelitian'      },
-        { name: 'Analisis'        },
+        { name: 'Riset Pasar'     },
+        { name: 'Analisis Data'   },
         { name: 'Pemecahan Masalah'},
       ],
     },
