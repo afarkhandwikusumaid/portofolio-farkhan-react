@@ -20,15 +20,24 @@ export const translations = {
       shortDesc:    'I help businesses and individuals turn ideas into beautiful and functional digital solutions.',
       viewProjects: 'View Projects',
       downloadCv:   'DOWNLOAD CV',
-      cardRole:     'Front-End Web Developer',
+      cardRole:     'Junior Front-End Web Developer',
       contactMe:    'Contact Me',
     },
 
     about: {
       label:   'About Me',
-      heading: 'FRONT-END WEB DEVELOPER & FREELANCE MARKETING SPECIALIST',
-      bio1:    'I am an Informatics Engineering student at Dian Nuswantoro University (UDINUS) focusing on Front-End Web Development (React.js). Outside of coding, I have a track record as a Freelance Marketing Specialist, specifically in building engagement and digital marketing strategies for creative production vendors.',
-      bio2:    'I currently work as a freelance marketing specialist for yearbook vendor companies. This combination of programming skills and market awareness enables me to approach software development from both angles: clean code architecture and real business/user needs.',
+      roles: [
+        {
+          heading: 'JUNIOR FRONT-END WEB DEVELOPER',
+          bio1:    'I am an Informatics Engineering student at Dian Nuswantoro University (UDINUS) with a strong passion for Front-End Web Development, specifically in the React.js ecosystem.',
+          bio2:    'I am currently deepening my knowledge in modern web technologies. I love exploring new frameworks, refining my coding skills, and continuously learning how to create better, more interactive digital experiences.',
+        },
+        {
+          heading: 'FREELANCE MARKETING SPECIALIST',
+          bio1:    'I have a solid track record as a Freelance Marketing Specialist. I focus on developing digital marketing strategies and building strong brand engagement for creative production vendors.',
+          bio2:    'I excel in understanding target audiences, crafting compelling campaigns, and utilizing social media platforms to drive growth. My goal is to help businesses connect meaningfully with their clients and boost their brand visibility.',
+        }
+      ],
       stats:   ['1 YEAR EXPERIENCE', '5+ PROJECTS', '5 CLIENTS SERVED'],
     },
 
@@ -126,15 +135,24 @@ export const translations = {
       shortDesc:    'Saya membantu bisnis dan individu mengubah ide menjadi solusi digital yang indah dan fungsional.',
       viewProjects: 'Lihat Proyek',
       downloadCv:   'UNDUH CV',
-      cardRole:     'Web Developer',
+      cardRole:     'Junior Front-End Web Developer',
       contactMe:    'Hubungi Saya',
     },
 
     about: {
       label:   'Tentang Saya',
-      heading: 'FRONT-END WEB DEVELOPER & FREELANCE MARKETING SPECIALIST',
-      bio1:    'Saya adalah mahasiswa Teknik Informatika UDINUS yang berfokus pada pengembangan Front-End Web Development (React.js). Di luar coding, saya memiliki rekam jejak sebagai Freelance Marketing Specialist, khususnya dalam membangun engagement dan strategi pemasaran digital untuk vendor creative production.',
-      bio2:    'Saat ini saya bekerja sebagai freelance marketing untuk perusahaan vendor yearbook. Kombinasi antara pemrograman dan market awareness membuat saya mampu melihat pengembangan perangkat lunak dari dua sisi: arsitektur kode yang bersih dan kebutuhan riil bisnis/pengguna.',
+      roles: [
+        {
+          heading: 'JUNIOR FRONT-END WEB DEVELOPER',
+          bio1:    'Saya adalah mahasiswa Teknik Informatika di Universitas Dian Nuswantoro (UDINUS) dengan minat mendalam pada pengembangan Front-End Web, khususnya dalam ekosistem React.js.',
+          bio2:    'Saat ini, saya sedang fokus memperdalam keterampilan saya di bidang teknologi web modern. Saya sangat antusias dalam mengeksplorasi framework baru, mengasah kemampuan coding, dan terus belajar untuk menciptakan karya digital yang interaktif.',
+        },
+        {
+          heading: 'FREELANCE MARKETING SPECIALIST',
+          bio1:    'Saya memiliki rekam jejak yang solid sebagai Freelance Marketing Specialist. Saya berfokus pada pengembangan strategi pemasaran digital dan membangun interaksi brand yang kuat untuk vendor produksi kreatif.',
+          bio2:    'Saya memiliki keahlian dalam memahami audiens target, merancang kampanye yang memikat, dan memanfaatkan media sosial untuk mendorong pertumbuhan. Tujuan saya adalah membantu bisnis meningkatkan visibilitas brand mereka secara signifikan di dunia digital.',
+        }
+      ],
       stats:   ['1 TAHUN PENGALAMAN', '5+ PROYEK', '5 KLIEN DILAYANI'],
     },
 
@@ -143,7 +161,7 @@ export const translations = {
       heading: 'Keahlian Khusus',
       items: [
         { title: 'Front-End Web Development', desc: 'Membangun aplikasi web responsif dengan spesialisasi pada React.js dan integrasi API yang mulus.' },
-        { title: 'Freelance Marketing Specialist', desc: 'Mengembangkan strategi pemasaran digital dan membangun engagement untuk perusahaan vendor buku tahunan secara lepas (freelance).' },
+        { title: 'Freelance Marketing Specialist', desc: 'Mengembangkan strategi pemasaran digital dan membangun engagement yang kuat untuk perusahaan produksi kreatif sebagai spesialis lepas.' },
         { title: 'Desain UI/UX',             desc: 'Merancang perjalanan pengguna yang intuitif, antarmuka yang bersih, dan sistem desain kustom untuk platform modern.' },
       ],
     },

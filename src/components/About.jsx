@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { useLang } from '../context/LanguageContext'
+import useEmblaCarousel from 'embla-carousel-react'
 
 // ── About component ───────────────────────────────────────────────────────────
 
 export default function About() {
   const { t } = useLang()
   const a = t.about
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    onSelect()
+    emblaApi.on('select', onSelect)
+    emblaApi.on('reInit', onSelect)
+  }, [emblaApi, onSelect])
 
   return (
     <section id="about" className="py-24 bg-[#0a0a0f] relative overflow-hidden space-grid">
@@ -56,12 +72,35 @@ export default function About() {
             </span>
           </div>
 
-          <h2 className="font-heading text-2xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">
-            {a.heading}
-          </h2>
+          <div className="w-full relative">
+            <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
+              <div className="flex touch-pan-y">
+                {a.roles?.map((role, index) => (
+                  <div key={index} className="flex-[0_0_100%] min-w-0 pr-4">
+                    <h2 className="font-heading text-2xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">
+                      {role.heading}
+                    </h2>
+                    <p className="text-zinc-400 font-body text-sm md:text-base leading-relaxed mb-6">{role.bio1}</p>
+                    <p className="text-zinc-400 font-body text-sm md:text-base leading-relaxed mb-8">{role.bio2}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-          <p className="text-zinc-400 font-body text-sm md:text-base leading-relaxed mb-6">{a.bio1}</p>
-          <p className="text-zinc-400 font-body text-sm md:text-base leading-relaxed mb-10">{a.bio2}</p>
+            {/* Pagination Dots */}
+            <div className="flex gap-2 mb-8 mt-2">
+              {a.roles?.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => emblaApi && emblaApi.scrollTo(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    selectedIndex === index ? 'bg-blue-500 w-8' : 'bg-zinc-700 w-2 hover:bg-zinc-500'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
 
           {/* Stats */}
           <div className="w-full mt-2">

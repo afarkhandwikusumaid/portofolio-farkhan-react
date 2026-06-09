@@ -114,12 +114,9 @@ export default function Hero() {
               
               {/* Overlay with Name & Role */}
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent flex flex-col justify-end p-6">
-                <h3 className="font-heading text-xl md:text-2xl font-extrabold text-white leading-tight mb-1">
-                  A. Farkhan Dwi Kusuma
-                </h3>
-                <p className="font-body text-[10px] text-zinc-400 tracking-widest uppercase">
+                <h3 className="font-body text-[10px] text-zinc-400 tracking-widest uppercase">
                   {h.cardRole}
-                </p>
+                </h3>
               </div>
             </div>
 
