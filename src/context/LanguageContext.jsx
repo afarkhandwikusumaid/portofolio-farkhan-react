@@ -72,6 +72,8 @@ export const translations = {
         { title: 'JavaScript Programming',      provider: 'Dicoding',  year: '2026', desc: 'Learned the fundamentals of JavaScript and ES6 features.' },
         { title: 'Front-End Web Development',   provider: 'Dicoding',  year: '2026', desc: 'Learned how to create a website using frontend technologies and basics of react.' },
         { title: 'Web App with React',          provider: 'Dicoding',  year: '2026', desc: 'Learned how to build UI components, manage state, and leverage modern React features to create interactive and reactive user experiences.' },
+        { title: 'Intro to Financial Literacy', provider: 'Dicoding',  year: '2026', desc: 'Learned the basics of financial literacy and how to manage personal finances.' },
+        { title: 'Strategy for Self-Development', provider: 'Dicoding', year: '2026', desc: 'Learned the importance of skills and how to improve them.' },
       ],
     },
 
@@ -189,6 +191,8 @@ export const translations = {
         { title: 'Pemrograman JavaScript',     provider: 'Dicoding',  year: '2026', desc: 'Mempelajari dasar-dasar JavaScript dan fitur ES6.' },
         { title: 'Pengembangan Front-End Web', provider: 'Dicoding',  year: '2026', desc: 'Mempelajari cara membuat web dengan teknologi frontend dan dasar-dasar react.' },
         { title: 'Aplikasi Web dengan React', provider: 'Dicoding',  year: '2026', desc: 'Membangun komponen UI, mengelola state, dan memanfaatkan fitur-fitur modern React untuk menciptakan pengalaman pengguna yang interaktif dan reaktif.' },
+        { title: 'Literasi Finansial Dasar',   provider: 'Dicoding',  year: '2026', desc: 'Mempelajari dasar-dasar literasi finansial dan cara mengelola keuangan pribadi.' },
+        { title: 'Strategi Pengembangan Diri', provider: 'Dicoding', year: '2026', desc: 'Mempelajari pentingnya skill dan cara meningkatkannya.' },
       ],
     },
 

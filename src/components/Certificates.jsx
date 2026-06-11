@@ -10,6 +10,8 @@ const CERT_IMAGES = [
   '/image/sertifikat/sertifjsdicoding.jpg',
   '/image/sertifikat/sertiffrontenddicoding.jpg',
   '/image/sertifikat/sertifreactdicoding.jpg',
+  '/image/sertifikat/sertifintrofinancialliteracydicoding.jpg',
+  '/image/sertifikat/sertifstrategipengembangandiridicoding.jpg',
 ]
 
 const DRAG_THRESHOLD = 40  // px
