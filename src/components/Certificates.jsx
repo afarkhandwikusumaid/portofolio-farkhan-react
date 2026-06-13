@@ -164,6 +164,36 @@ export default function Certificates() {
 
   const cardWidth = `calc((100% - ${(cardsPerView - 1) * CARD_GAP}px) / ${cardsPerView})`
 
+  // ── Pagination Dots Calculation ───────────────────────────────────────────
+  const totalDots = maxIndex + 1
+  const maxDotsVisible = cardsPerView === 1 ? 3 : 5
+
+  const dotWidths = []
+  const dotLefts = []
+  let totalWidth = 0
+
+  for (let i = 0; i < totalDots; i++) {
+    const w = i === current ? 24 : 8
+    dotWidths.push(w)
+    dotLefts.push(totalWidth)
+    totalWidth += w + 8
+  }
+  if (totalDots > 0) {
+    totalWidth -= 8
+  }
+
+  const viewportWidth = totalDots <= maxDotsVisible
+    ? totalWidth
+    : (maxDotsVisible * 8 + (maxDotsVisible - 1) * 8 + 16)
+
+  let trackTranslate = 0
+  if (totalDots > maxDotsVisible) {
+    const activeCenter = dotLefts[current] + dotWidths[current] / 2
+    const targetTranslate = viewportWidth / 2 - activeCenter
+    const minTranslate = viewportWidth - totalWidth
+    trackTranslate = Math.max(minTranslate, Math.min(0, targetTranslate))
+  }
+
   // ── Render ─────────────────────────────────────────────────────────────────
 
   return (
@@ -268,20 +298,28 @@ export default function Certificates() {
           <div className="flex items-center justify-center gap-5 mt-8">
             <ArrowBtn dir="prev" onClick={prev} disabled={current === 0} />
 
-            <div className="flex items-center gap-2">
-              {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => goTo(idx)}
-                  aria-label={`Go to slide ${idx + 1}`}
-                  className="transition-all duration-300 rounded-full"
-                  style={{
-                    width: idx === current ? '24px' : '8px',
-                    height: '8px',
-                    background: idx === current ? '#3b82f6' : 'rgba(63,63,70,0.8)',
-                  }}
-                />
-              ))}
+            <div
+              className="overflow-hidden transition-all duration-300 flex items-center"
+              style={{ width: `${viewportWidth}px` }}
+            >
+              <div
+                className="flex items-center gap-2 transition-transform duration-300 ease-in-out"
+                style={{ transform: `translateX(${trackTranslate}px)` }}
+              >
+                {Array.from({ length: totalDots }).map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => goTo(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                    className="transition-all duration-300 rounded-full flex-shrink-0"
+                    style={{
+                      width: idx === current ? '24px' : '8px',
+                      height: '8px',
+                      background: idx === current ? '#3b82f6' : 'rgba(63,63,70,0.8)',
+                    }}
+                  />
+                ))}
+              </div>
             </div>
 
             <ArrowBtn dir="next" onClick={next} disabled={current === maxIndex} />
