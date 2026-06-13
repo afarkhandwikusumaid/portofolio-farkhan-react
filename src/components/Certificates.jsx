@@ -12,13 +12,14 @@ const CERT_IMAGES = [
   '/image/sertifikat/sertifreactdicoding.jpg',
   '/image/sertifikat/sertifintrofinancialliteracydicoding.jpg',
   '/image/sertifikat/sertifstrategipengembangandiridicoding.jpg',
+  '/image/sertifikat/sertidatasciencemsfabricdicoding.jpg',
 ]
 
-const DRAG_THRESHOLD = 40  // px
-const DESKTOP_BREAKPOINT = 768
+const DRAG_THRESHOLD = 40  
+const DESKTOP_BREAKPOINT = 768 
 const DESKTOP_CARDS = 3
 const MOBILE_CARDS = 1
-const CARD_GAP = 24 // px (gap-6 = 1.5rem = 24px)
+const CARD_GAP = 24 
 
 // ── Sub-components ────────────────────────────────────────────────────────────
 
