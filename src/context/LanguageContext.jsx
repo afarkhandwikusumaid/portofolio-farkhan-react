@@ -74,7 +74,7 @@ export const translations = {
         { title: 'Web App with React',          provider: 'Dicoding',  year: '2026', desc: 'Learned how to build UI components, manage state, and leverage modern React features to create interactive and reactive user experiences.' },
         { title: 'Intro to Financial Literacy', provider: 'Dicoding',  year: '2026', desc: 'Learned the basics of financial literacy and how to manage personal finances.' },
         { title: 'Strategy for Self-Development', provider: 'Dicoding', year: '2026', desc: 'Learned the importance of skills and how to improve them.' },
-        { title: 'Basic Data Science with Ms. Fabric', provider: 'Dicoding', year: '2026', desc: 'Learned the basics of data science and how to use Ms. Fabric to analyze data.' },
+        { title: 'Basic of Data Science with Ms. Fabric', provider: 'Dicoding', year: '2026', desc: 'Learned the basics of data science and how to use Ms. Fabric to analyze data.' },
       ],
     },
 
