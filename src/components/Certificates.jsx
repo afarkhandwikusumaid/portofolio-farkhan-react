@@ -5,6 +5,7 @@ import { useLang } from '../context/LanguageContext'
 
 const CERT_IMAGES = [
   '/image/sertifikat/sertifbtngweb.jpeg',
+  '/image/sertifikat/sertifwebdevdoscom.png',
   '/image/sertifikat/sertifaidicoding.jpg',
   '/image/sertifikat/sertifwebistedicoding.jpg',
   '/image/sertifikat/sertifjsdicoding.jpg',
