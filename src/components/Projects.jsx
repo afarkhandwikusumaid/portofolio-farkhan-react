@@ -6,7 +6,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 
 const PROJECTS = [
   {
-    image: '/image/purielena.jpg',
+    image: '/image/purielena.png',
     link:  'https://purielena.com',
   },
   {
@@ -14,7 +14,7 @@ const PROJECTS = [
     link:  'https://peradikharisma.org',
   },
   {
-    image: '/image/pointcut.jpg',
+    image: '/image/pointcut.png',
     link:  'https://pointcut-hairstudio.com',
   },
   {
@@ -108,7 +108,7 @@ export default function Projects() {
       <div className="relative w-full overflow-visible flex flex-col md:flex-row items-stretch min-h-[500px] md:min-h-[600px] z-10">
           
           {/* Left Side: Large Active Image */}
-          <div className="w-full md:w-[60%] md:absolute left-0 top-0 aspect-video md:aspect-auto md:h-full z-0 overflow-hidden bg-black/40 md:bg-transparent">
+          <div className="w-full md:w-[75%] md:absolute left-0 top-0 aspect-video md:aspect-auto md:h-full z-0 overflow-hidden bg-black/40 md:bg-transparent">
             <img
               // Adding a key forces re-render/animation on image change
               key={activeImage}
@@ -121,7 +121,7 @@ export default function Projects() {
           </div>
 
           {/* Right Side: Cards Carousel */}
-          <div className="w-full md:w-[55%] z-10 relative mt-[-60px] md:mt-0 md:ml-auto flex flex-col justify-center pb-12 md:pb-0 md:pl-8">
+          <div className="w-full md:w-[50%] z-10 relative mt-[-60px] md:mt-0 md:ml-auto flex flex-col justify-center pb-12 md:pb-0 md:pl-8">
              
              {/* Embla Viewport */}
              <div className="overflow-hidden w-full cursor-grab active:cursor-grabbing px-6 md:px-0" ref={emblaRef}>
@@ -209,30 +209,34 @@ export default function Projects() {
              </div>
 
              {/* Navigation Prev / Next Buttons */}
-             <div className="flex justify-end gap-4 px-6 md:pr-12 md:pl-0 mt-4 md:mt-6 w-full">
+              <div className="flex justify-end gap-4 px-6 md:pr-12 md:pl-0 mt-4 md:mt-6 w-full">
                <button 
                  onClick={scrollPrev} 
                  disabled={prevBtnDisabled}
                  aria-label="Previous Project"
-                 className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 backdrop-blur-md shadow-lg ${
+                 className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-200 ${
                    prevBtnDisabled 
-                     ? 'border-zinc-800 bg-zinc-900/40 text-zinc-600 cursor-not-allowed' 
-                     : 'border-zinc-700 bg-zinc-900/60 hover:bg-[#002f9c] hover:border-[#002f9c] text-white cursor-pointer'
+                     ? 'border-zinc-700/50 bg-[#1e1e28]/40 text-zinc-600 cursor-not-allowed scale-[0.92]' 
+                     : 'border-blue-500/50 bg-blue-500/12 text-blue-400 hover:bg-blue-500/20 cursor-pointer scale-100'
                  }`}
                >
-                 <ArrowLeftIcon />
+                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                   <polyline points="15 18 9 12 15 6" />
+                 </svg>
                </button>
                <button 
                  onClick={scrollNext} 
                  disabled={nextBtnDisabled}
                  aria-label="Next Project"
-                 className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 backdrop-blur-md shadow-lg ${
+                 className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-200 ${
                    nextBtnDisabled 
-                     ? 'border-zinc-800 bg-zinc-900/40 text-zinc-600 cursor-not-allowed' 
-                     : 'border-zinc-700 bg-zinc-900/60 hover:bg-[#002f9c] hover:border-[#002f9c] text-white cursor-pointer'
+                     ? 'border-zinc-700/50 bg-[#1e1e28]/40 text-zinc-600 cursor-not-allowed scale-[0.92]' 
+                     : 'border-blue-500/50 bg-blue-500/12 text-blue-400 hover:bg-blue-500/20 cursor-pointer scale-100'
                  }`}
                >
-                 <ArrowRightIcon />
+                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                   <polyline points="9 18 15 12 9 6" />
+                 </svg>
                </button>
              </div>
 
