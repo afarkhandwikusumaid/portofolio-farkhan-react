@@ -16,6 +16,10 @@ const PROJECTS = [
     image: '/image/pointcut.jpg',
     link:  'https://pointcut-hairstudio.com',
   },
+  {
+    image: '/image/koslievi.png',
+    link:  'https://kos-lievi.vercel.app',
+  },
 ]
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
@@ -64,57 +68,66 @@ export default function Projects() {
         </div>
 
         {/* Project cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {p.items.map((project, idx) => (
-            <div key={idx} className="service-card p-6 rounded-2xl flex flex-col h-full group">
+        <div className="flex flex-col gap-16 md:gap-32">
+          {p.items.map((project, idx) => {
+            const isEven = idx % 2 === 1;
+            return (
+              <div key={idx} className={`flex flex-col md:flex-row items-center gap-0 group ${isEven ? 'md:flex-row-reverse' : ''}`}>
+                
+                {/* Image Section */}
+                <div className={`w-[92%] md:w-7/12 relative rounded-2xl overflow-hidden border border-zinc-800/80 bg-zinc-950 aspect-[16/10] shadow-2xl z-0 ${isEven ? 'self-end md:self-auto' : 'self-start md:self-auto'}`}>
+                  <img
+                    src={PROJECTS[idx].image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/20 to-transparent opacity-80 pointer-events-none" />
+                </div>
 
-              {/* Thumbnail */}
-              <div className="w-full aspect-[16/10] rounded-xl overflow-hidden mb-6 border border-zinc-800/80 bg-zinc-950 relative">
-                <img
-                  src={PROJECTS[idx].image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                {/* Content Section */}
+                <div className={`w-[92%] md:w-6/12 flex flex-col z-10 -mt-8 md:mt-0 ${isEven ? 'self-start md:self-auto items-start text-left md:-mr-24' : 'self-end md:self-auto items-start md:items-end text-left md:text-right md:-ml-24'}`}>
+                  <div className="service-card p-6 md:p-10 rounded-2xl backdrop-blur-xl bg-zinc-900/80 border border-zinc-800 shadow-2xl w-full">
+                    <h3 className="font-heading text-xl md:text-4xl font-extrabold uppercase tracking-tight text-white mb-3 md:mb-4">
+                      {project.title}
+                    </h3>
+                    
+                    <div className={`flex flex-wrap gap-2 mb-4 md:mb-6 ${isEven ? 'justify-start' : 'md:justify-end'}`}>
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2.5 py-1 md:px-3 md:py-1.5 rounded-md bg-blue-500/10 border border-blue-500/20 text-[10px] md:text-xs font-body tracking-wider text-blue-400"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <p className="text-zinc-300 font-body text-xs md:text-base leading-relaxed mb-6 md:mb-8">
+                      {project.desc}
+                    </p>
+
+                    {/* CTA */}
+                    <div className={`flex ${isEven ? 'justify-start' : 'md:justify-end'}`}>
+                      <a
+                        href={PROJECTS[idx].link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center gap-2 md:gap-3 py-2.5 md:py-3 px-6 md:px-8 rounded-lg border border-zinc-700 bg-zinc-800/50 hover:bg-blue-600 hover:border-blue-500 text-white font-body text-[10px] md:text-xs font-bold tracking-widest uppercase transition-all duration-300 group/btn"
+                      >
+                        <span>{p.visitSite}</span>
+                        <span className="transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300">
+                          <ArrowIcon />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-
-              <h3 className="font-heading text-xl font-bold uppercase tracking-tight text-white mb-3 text-left">
-                {project.title}
-              </h3>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2.5 py-1 rounded bg-zinc-900/60 border border-zinc-800 text-[10px] font-body tracking-wider text-zinc-400"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <p className="text-zinc-400 font-body text-xs md:text-sm leading-relaxed mb-6 text-left flex-grow">
-                {project.desc}
-              </p>
-
-              {/* CTA */}
-              <a
-                href={PROJECTS[idx].link}
-                target="_blank"
-                rel="noreferrer"
-                className="w-full py-3 rounded-lg border border-zinc-800 bg-zinc-900/40 hover:bg-blue-500/10 hover:border-blue-500 text-center text-white font-body text-xs font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 group/btn"
-              >
-                <span>{p.visitSite}</span>
-                <span className="transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-200">
-                  <ArrowIcon />
-                </span>
-              </a>
-
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

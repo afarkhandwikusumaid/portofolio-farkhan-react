@@ -59,6 +59,7 @@ export const translations = {
         { title: 'Puri Elena',           desc: 'An elegant digital presence developed for Puri Elena. Incorporating lightweight interfaces and customized client workflow layouts.',                         tags: ['React', 'Tailwind'] },
         { title: 'Peradi Kharisma',     desc: 'Official platform for Peradi Kharisma. Built with a robust layout system to provide clear informational portals and accessibility.',                      tags: ['HTML', 'CSS', 'JS'] },
         { title: 'Pointcut Hair Studio', desc: 'Interactive booking and styling catalogue website for Pointcut Hair Studio. Designed with smooth micro-interactions.',                                   tags: ['React', 'Tailwind'] },
+        { title: 'Kos Lievi',            desc: 'A modern landing page for a boarding house. Built to highlight the peaceful and premium environment of Kos Lievi.', tags: ['React', 'Tailwind'] },
       ],
     },
 
@@ -176,9 +177,10 @@ export const translations = {
       heading:   'Proyek Unggulan',
       visitSite: 'KUNJUNGI SITUS',
       items: [
-        { title: 'Puri Elena',           desc: 'Kehadiran digital elegan yang dikembangkan untuk Puri Elena. Menggabungkan antarmuka ringan dan tata letak alur kerja klien yang disesuaikan.',                    tags: ['React', 'Tailwind'] },
-        { title: 'Peradi Kharisma',     desc: 'Platform resmi untuk Peradi Kharisma. Dibangun dengan sistem tata letak yang kokoh untuk menyajikan portal informasi yang jelas dan aksesibel.',                tags: ['HTML', 'CSS', 'JS'] },
-        { title: 'Pointcut Hair Studio', desc: 'Website booking interaktif dan katalog gaya untuk Pointcut Hair Studio. Dibangun dengan micro-interaction yang halus.',                                          tags: ['React', 'Tailwind'] },
+        { title: 'Puri Elena',           desc: 'Kehadiran digital elegan yang dikembangkan untuk Puri Elena. Menggabungkan antarmuka ringan dan tata letak alur kerja klien yang disesuaikan.', tags: ['React', 'Tailwind'] },
+        { title: 'Peradi Kharisma',     desc: 'Platform resmi untuk Peradi Kharisma. Dibangun dengan sistem tata letak yang kokoh untuk menyajikan portal informasi yang jelas dan aksesibel.', tags: ['HTML', 'CSS', 'JS'] },
+        { title: 'Pointcut Hair Studio', desc: 'Website booking interaktif dan katalog gaya untuk Pointcut Hair Studio. Dibangun dengan micro-interaction yang halus.', tags: ['React', 'Tailwind'] },
+        { title: 'Kos Lievi',            desc: 'Landing page modern untuk rumah kos. Dibangun untuk menyoroti lingkungan yang damai dan premium di Kos Lievi.', tags: ['React', 'Tailwind'] },
       ],
     },
 
