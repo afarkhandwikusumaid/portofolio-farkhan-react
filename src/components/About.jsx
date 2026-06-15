@@ -104,7 +104,7 @@ export default function About() {
 
           {/* Stats */}
           <div className="w-full mt-2">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               {a.stats.map((stat, idx) => {
                 // Split only on first space to correctly handle multi-word values like "5+"
                 const spaceIdx = stat.indexOf(' ')

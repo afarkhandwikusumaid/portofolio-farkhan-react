@@ -83,7 +83,7 @@ export default function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-row gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <a
               href="#projects"
               className="px-6 md:px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-body text-xs md:text-sm font-bold tracking-wider text-center flex items-center justify-center gap-2 transition-all duration-300"
@@ -102,10 +102,10 @@ export default function Hero() {
 
         {/* ── Right Column — Premium Floating Card ────────────────────── */}
         <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center items-center overflow-visible py-8 lg:py-0">
-          <div className="relative max-w-[350px] w-full bg-zinc-950/60 rounded-3xl border border-zinc-900 p-4 backdrop-blur-xl shadow-2xl overflow-hidden animate-floatY">
+          <div className="relative max-w-[300px] md:max-w-[350px] w-full bg-zinc-950/60 rounded-3xl border border-zinc-900 p-4 backdrop-blur-xl shadow-2xl overflow-hidden animate-floatY">
             
             {/* Inner Portrait Card */}
-            <div className="h-[340px] md:h-[390px] rounded-2xl overflow-hidden relative group">
+            <div className="h-[280px] md:h-[390px] rounded-2xl overflow-hidden relative group">
               <img 
                 src="/image/farkhandwi.png" 
                 alt="A. Farkhan Dwi Kusuma" 
