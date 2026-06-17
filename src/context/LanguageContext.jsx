@@ -94,7 +94,6 @@ export const translations = {
         { name: 'HTML & CSS'       },
         { name: 'JavaScript'       },
         { name: 'React.js'         },
-        { name: 'Next.js'          },
         { name: 'Tailwind CSS'     },
       ],
       freelanceSkills: [
@@ -217,7 +216,6 @@ export const translations = {
         { name: 'HTML & CSS'      },
         { name: 'JavaScript'      },
         { name: 'React.js'        },
-        { name: 'Next.js'         },
         { name: 'Tailwind CSS'    },
       ],
       freelanceSkills: [
