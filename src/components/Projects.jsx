@@ -190,14 +190,15 @@ export default function Projects() {
                            href={PROJECTS[idx].link} 
                            target="_blank" 
                            rel="noreferrer" 
-                           aria-label="Visit Site"
-                           className={`self-end w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg ${
+                           aria-label={p.visitSite}
+                           className={`self-end px-5 py-2.5 rounded-full flex gap-2 items-center justify-center ${
                              isActive 
                                ? 'bg-blue-500 text-white hover:bg-white hover:text-[#002f9c]' 
                                : 'bg-zinc-900 text-white hover:bg-blue-600 hover:text-white'
                            }`}
                          >
-                            <ArrowUpRightIcon />
+                           <span className="text-sm font-medium">{p.visitSite}</span>
+                           <ArrowUpRightIcon />
                          </a>
 
                        </div>
