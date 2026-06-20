@@ -87,8 +87,8 @@ export const translations = {
       expertiseLabel: 'Technical Expertise',
       expertiseText:  'I focus on crafting pixel-perfect interfaces and solid web structures. My learning path is oriented around building responsive software systems.',
       education: [
-        { institution: 'UNIVERSITAS DIAN NUSWANTORO', program: 'Teknik Informatika', years: '2025 – Now' },
-        { institution: 'SMA N 1 BATANG',              program: 'IPA (Science)',       years: '2022 – 2025' },
+        { institution: 'UNIVERSITAS DIAN NUSWANTORO', program: 'INFORMATICS ENGINEERING', years: '2025 – Now' },
+        { institution: 'SMA N 1 BATANG',              program: 'SCIENCE',       years: '2022 – 2025' },
       ],
       codingSkills: [
         { name: 'HTML & CSS'       },
@@ -210,7 +210,7 @@ export const translations = {
       expertiseText:  'Saya berfokus pada pembuatan antarmuka yang presisi dan struktur web yang solid. Jalur belajar saya berorientasi pada pembangunan sistem perangkat lunak yang responsif.',
       education: [
         { institution: 'UNIVERSITAS DIAN NUSWANTORO', program: 'Teknik Informatika',           years: '2025 – Sekarang' },
-        { institution: 'SMA N 1 BATANG',              program: 'IPA (Ilmu Pengetahuan Alam)', years: '2022 – 2025' },
+        { institution: 'SMA N 1 BATANG',              program: 'Ilmu Pengetahuan Alam', years: '2022 – 2025' },
       ],
       codingSkills: [
         { name: 'HTML & CSS'      },
