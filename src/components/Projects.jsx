@@ -6,6 +6,10 @@ import useEmblaCarousel from 'embla-carousel-react'
 
 const PROJECTS = [
   {
+    image: '/image/fotomomen.png',
+    link:  'https://fotomomen.studio',
+  },
+  {
     image: '/image/purielena.png',
     link:  'https://purielena.com',
   },
