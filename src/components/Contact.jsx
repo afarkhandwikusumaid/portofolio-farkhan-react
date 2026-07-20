@@ -50,6 +50,13 @@ const IconEmail = () => (
   </svg>
 )
 
+const ArrowUpRightIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="7" y1="17" x2="17" y2="7" />
+    <polyline points="7 7 17 7 17 17" />
+  </svg>
+)
+
 // Static contact info that doesn't change with language
 const CONTACT_INFO_STATIC = [
   { title: 'Phone', value: '(+62) 859 4462 9716',          Icon: IconPhone    },
@@ -161,9 +168,12 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full md:w-auto self-start px-8 py-4 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-body text-sm font-bold tracking-wider hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300 cursor-pointer"
+                className="w-full md:w-auto self-start px-8 py-3.5 rounded-full flex gap-2 items-center justify-center bg-blue-600 text-white hover:bg-white hover:text-blue-700 font-body text-sm font-bold tracking-wider transition-colors duration-300 group"
               >
-                {c.send}
+                <span>{c.send}</span>
+                <span className="transform transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                  <ArrowUpRightIcon />
+                </span>
               </button>
 
             </form>
