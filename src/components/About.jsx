@@ -31,35 +31,24 @@ export default function About() {
 
         {/* Photo */}
         <div className="lg:col-span-5 flex justify-center lg:justify-start">
-          <div className="relative w-full max-w-[360px] aspect-square rounded-2xl border border-zinc-800/80 p-2 bg-zinc-900/30 backdrop-blur-sm">
-
-            {/* Gradient overlay */}
-            <div className="absolute inset-2 rounded-xl bg-gradient-to-tr from-accent-purple/30 via-transparent to-accent-green/20 z-10 pointer-events-none" />
-
+          <div className="relative w-full max-w-[360px] aspect-square rounded-2xl overflow-hidden shadow-2xl">
             <img
               src="/image/farkhan.png"
               alt="A. Farkhan Dwi Kusuma"
-              className="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-500 ease-out"
+              className="w-full h-full object-cover"
               loading="lazy"
               decoding="async"
             />
 
             {/* Location badge */}
-            <div className="absolute -bottom-4 right-2 md:-right-4 bg-zinc-900/95 border border-zinc-800 px-4 py-3 rounded-xl flex items-center gap-2.5 shadow-2xl animate-floatY">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-pulse absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500" />
+            <div className="absolute bottom-4 right-4 bg-zinc-900/90 backdrop-blur-md border border-zinc-800 px-4 py-2 rounded-xl flex items-center gap-2 shadow-lg">
+              <span className="relative flex h-2 w-2">
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
               </span>
               <span className="font-body text-[10px] md:text-xs uppercase tracking-wider text-zinc-300">
                 Semarang, Jawa Tengah
               </span>
             </div>
-
-            {/* Corner accents */}
-            <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-blue-500 rounded-tl-lg" />
-            <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-2 border-l-2 border-blue-500 rounded-bl-lg" />
-            <div className="absolute -top-1 -right-1 w-6 h-6 border-t-2 border-r-2 border-blue-500 rounded-tr-lg" />
-            <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-blue-500 rounded-br-lg" />
           </div>
         </div>
 
