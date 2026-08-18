@@ -57,6 +57,7 @@ export const translations = {
       visitSite: 'VISIT SITE',
       items: [
         { title: 'Foto Momen',           desc: 'A virtual photobooth platform that allows users to create and share digital photo strips with friends, built with modern web technologies.', tags: ['Next.js', 'Tailwind', 'Supabase'] },
+        { title: 'Womens Beauty SMKN 1 Pekalongan', desc: 'Official website for the Womens Beauty department at SMKN 1 Pekalongan. Built with a robust layout system to provide clear informational portals and accessibility.', tags: ['React', 'Tailwind', 'Supabase'] },  
         { title: 'Puri Elena',           desc: 'An elegant digital presence developed for Puri Elena. Incorporating lightweight interfaces and customized client workflow layouts.',                         tags: ['React', 'Tailwind'] },
         { title: 'Peradi Kharisma',     desc: 'Official platform for Peradi Kharisma. Built with a robust layout system to provide clear informational portals and accessibility.',                      tags: ['HTML', 'CSS', 'JS'] },
         { title: 'Pointcut Hair Studio', desc: 'Interactive booking and styling catalogue website for Pointcut Hair Studio. Designed with smooth micro-interactions.',                                   tags: ['React', 'Tailwind'] },
@@ -179,7 +180,8 @@ export const translations = {
       visitSite: 'KUNJUNGI SITUS',
       items: [
         { title: 'Foto Momen',           desc: 'Platform virtual photobooth yang memungkinkan pengguna membuat dan membagikan foto strip digital bersama teman, dibangun dengan teknologi web modern.', tags: ['Next.js', 'Tailwind', 'Supabase'] },
-        { title: 'Puri Elena',           desc: 'Kehadiran digital elegan yang dikembangkan untuk Puri Elena. Menggabungkan antarmuka ringan dan tata letak alur kerja klien yang disesuaikan.', tags: ['React', 'Tailwind'] },
+        { title: 'Kecantikan SMKN 1 Pekalongan', desc: 'Website resmi untuk Jurusan Kecantikan SMKN 1 Pekalongan. Dibangun dengan sistem tata letak yang kokoh untuk menyajikan portal informasi yang jelas dan aksesibel.', tags: ['React', 'Tailwind', 'Supabase'] },
+        { title: 'Puri Elena',           desc: 'Kehadiran digital yang elegan untuk Puri Elena. Menggabungkan antarmuka yang ringan dan tata letak alur kerja klien yang disesuaikan.', tags: ['React', 'Tailwind'] },
         { title: 'Peradi Kharisma',     desc: 'Platform resmi untuk Peradi Kharisma. Dibangun dengan sistem tata letak yang kokoh untuk menyajikan portal informasi yang jelas dan aksesibel.', tags: ['HTML', 'CSS', 'JS'] },
         { title: 'Pointcut Hair Studio', desc: 'Website booking interaktif dan katalog gaya untuk Pointcut Hair Studio. Dibangun dengan micro-interaction yang halus.', tags: ['React', 'Tailwind'] },
         { title: 'Kos Lievi',            desc: 'Landing page modern untuk rumah kos. Dibangun untuk menyoroti lingkungan yang damai dan premium di Kos Lievi.', tags: ['React', 'Tailwind'] },

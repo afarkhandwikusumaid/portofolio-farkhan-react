@@ -10,6 +10,10 @@ const PROJECTS = [
     link:  'https://fotomomen.studio',
   },
   {
+    image: '/image/kecantikan.png',
+    link:  'https://www.kecantikan-smkn1pekalongan.web.id',
+  },
+  {
     image: '/image/purielena.png',
     link:  'https://purielena.com',
   },
