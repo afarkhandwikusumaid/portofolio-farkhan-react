@@ -148,7 +148,7 @@ export default function Projects() {
                        }}
                      >
                        <div 
-                         className={`relative overflow-hidden group p-8 md:p-10 rounded-2xl shadow-2xl h-full flex flex-col transition-colors duration-500 border ${
+                         className={`relative overflow-hidden group p-6 md:p-10 rounded-2xl shadow-2xl h-full flex flex-col transition-colors duration-500 border w-full ${
                            isActive 
                             ? 'bg-[#002f9c] border-[#0041d4]'  // Pertamina Blue
                             : 'bg-white border-zinc-200 hover:shadow-blue-500/10'       // White/Light
@@ -159,7 +159,7 @@ export default function Projects() {
                            isActive ? 'bg-white/50 scale-x-100' : 'bg-blue-600 scale-x-0 group-hover:scale-x-100'
                          }`} />
                          
-                         <h3 className={`font-heading text-2xl md:text-3xl font-extrabold uppercase tracking-tight mb-3 ${
+                         <h3 className={`font-heading text-xl md:text-3xl font-extrabold uppercase tracking-tight mb-3 break-words ${
                            isActive ? 'text-white' : 'text-zinc-900'
                          }`}>
                            {project.title}
